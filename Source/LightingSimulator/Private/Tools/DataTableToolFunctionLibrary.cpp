@@ -76,38 +76,18 @@ void UDataTableToolFunctionLibrary::GetDataTableAsCSVString(UDataTable* DataTabl
 		return;
 	}
 
-	// First build array of properties
-	TArray<FProperty*> StructProps;
-	for (TFieldIterator<FProperty> It(DataTable->RowStruct); It; ++It)
-	{
-		FProperty* Prop = *It;
-		check(Prop != nullptr);
-		StructProps.Add(Prop);
-	}
-
-	// First row, column titles, taken from properties
-	CSVString += TEXT("---");
-	for (int32 PropIdx = 0; PropIdx < StructProps.Num(); PropIdx++)
-	{
-		CSVString += TEXT(",");
-		CSVString += StructProps[PropIdx]->GetName();
-	}
-	CSVString += TEXT("\n");
-
-	// Now iterate over rows
-	for (auto RowIt = DataTable->GetRowMap().CreateConstIterator(); RowIt; ++RowIt)
-	{
-		FName RowName = RowIt.Key();
-		CSVString += RowName.ToString();
-
-		uint8* RowData = RowIt.Value();
-		for (int32 PropIdx = 0; PropIdx < StructProps.Num(); PropIdx++)
-		{
+	TArray<TArray<FString>> DataTableRows = DataTable->GetTableData();
+	DataTableRows[0][0] = DataTable->ImportKeyField;
+	
+	for (int32 row = 0; row < DataTableRows.Num(); ++row) {
+		for (int32 col = 0; col < DataTableRows[row].Num(); ++col){
+			CSVString += DataTableRows[row][col];
 			CSVString += TEXT(",");
-			CSVString += DataTableUtils::GetPropertyValueAsString(StructProps[PropIdx], RowData, EDataTableExportFlags::None);
 		}
 		CSVString += TEXT("\n");
 	}
+
+
 }
 
 void UDataTableToolFunctionLibrary::GetDataTableAsCSVFile(UDataTable* DataTable, const FString& CSVFilePath)
@@ -118,5 +98,43 @@ void UDataTableToolFunctionLibrary::GetDataTableAsCSVFile(UDataTable* DataTable,
 	{
 		return;
 	}
-	FFileHelper::SaveStringToFile(CSVString, *CSVFilePath, FFileHelper::EEncodingOptions::ForceUTF8);
+	FString str = CSVFilePath;
+	str = str.ToLower();
+	if (!str.Contains(".csv")) {
+		str = CSVFilePath + ".csv";
+	}
+	else {
+		str = CSVFilePath;
+	}
+	FFileHelper::SaveStringToFile(CSVString, *str, FFileHelper::EEncodingOptions::ForceUTF8);
+}
+
+void UDataTableToolFunctionLibrary::GetDataTableAsJSONString(UDataTable* DataTable, FString& JSONString)
+{
+	JSONString = FString();
+
+	if (!DataTable || (DataTable->RowStruct == nullptr))
+	{
+		return;
+	}
+	JSONString = DataTable->GetTableAsJSON();
+}
+
+void UDataTableToolFunctionLibrary::GetDataTableAsJSONFile(UDataTable* DataTable, const FString& JSONFilePath)
+{
+	FString JSONString;
+	GetDataTableAsJSONString(DataTable, JSONString);
+	if (JSONString.Len() == 0)
+	{
+		return;
+	}
+	FString str = JSONFilePath;
+	str = str.ToLower();
+	if (!str.Contains(".json")) {
+		str = JSONFilePath + ".json";
+	}
+	else {
+		str = JSONFilePath;
+	}
+	FFileHelper::SaveStringToFile(JSONString, *str, FFileHelper::EEncodingOptions::ForceUTF8);
 }

@@ -56,8 +56,14 @@ public:
 	static FString GetGameSavedLogDir();
 
 	/// <summary>
-/// InstallDir/WindowsNoEditor/GameName/Content/CSV/
-/// </summary>
+	/// InstallDir/WindowsNoEditor/GameName/Content/CSV/
+	/// </summary>
 	UFUNCTION(BlueprintCallable, Category = "Paths", BlueprintPure)
 	static FString GetGameContentCSVDir();
+
+	/// <summary>
+	/// InstallDir/WindowsNoEditor/GameName/Content/JSON/
+	/// </summary>
+	UFUNCTION(BlueprintCallable, Category = "Paths", BlueprintPure)
+		static FString GetGameContentJSONDir();
 };

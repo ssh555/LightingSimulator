@@ -37,3 +37,8 @@ FString UGamePathToolFunctionLibrary::GetGameContentCSVDir()
 {
 	return GetGameContentDir() + "CSV/";
 }
+
+FString UGamePathToolFunctionLibrary::GetGameContentJSONDir()
+{
+	return GetGameContentDir() + "JSON/";
+}
