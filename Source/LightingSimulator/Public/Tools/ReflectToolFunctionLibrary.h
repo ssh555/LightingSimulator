@@ -7,6 +7,7 @@
 #include "ReflectToolFunctionLibrary.generated.h"
 
 class UObject;
+class UDataTable;
 
 /**
  * 
@@ -117,7 +118,6 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "ReflectTool|ExeFunction")
 	static bool ExeFunction(UObject* Target, FName FunctionName, T& param1, U& param2, P& param3, Q& param4, W& param5);
 #pragma endregion
-
 
 
 };

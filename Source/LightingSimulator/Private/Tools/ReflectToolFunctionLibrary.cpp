@@ -5,6 +5,9 @@
 #include <UObject/NoExportTypes.h>
 #include <UObject/Class.h>
 #include <HAL/Platform.h>
+#include <Engine/DataTable.h>
+#include <EditorFramework/AssetImportData.h>
+#include "Tools/DataTableToolFunctionLibrary.h"
 
 template<typename T>
 T UReflectToolFunctionLibrary::GetPropertyValue(UObject* Target, FString PropertyName)
@@ -306,4 +309,5 @@ bool UReflectToolFunctionLibrary::ExeFunction(UObject* Target, FName FunctionNam
 	}
 	return false;
 }
+
 

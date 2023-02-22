@@ -1,0 +1,19 @@
+DataTable.h
+
+/** Gets a multicast delegate that is called any time the data table changes. */
+FOnDataTableChanged& OnDataTableChanged() { return OnDataTableChangedDelegate; }
+
+/** The file this data table was imported from, may be empty */
+UPROPERTY(VisibleAnywhere, Instanced, Category=ImportSource)
+class UAssetImportData* AssetImportData;
+
+/** The filename imported to create this object. Relative to this object's package, BaseDir() or absolute */
+UPROPERTY()
+FString ImportPath_DEPRECATED;
+
+/** 
+    *	Create table from CSV style comma-separated string. 
+    *	RowStruct must be defined before calling this function. 
+    *	@return	Set of problems encountered while processing input
+    */
+ENGINE_API TArray<FString> CreateTableFromCSVString(const FString& InString);
