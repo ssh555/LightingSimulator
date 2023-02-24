@@ -42,3 +42,8 @@ FString UGamePathToolFunctionLibrary::GetGameContentJSONDir()
 {
 	return GetGameContentDir() + "JSON/";
 }
+
+FString UGamePathToolFunctionLibrary::GetGameLightEntityJSONDir()
+{
+	return GetGameContentJSONDir() + "LightEntity/";
+}

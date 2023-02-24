@@ -3,6 +3,9 @@
 
 #include "Tools/DataTableToolFunctionLibrary.h"
 #include <Engine/DataTable.h>
+#include <Components/DirectionalLightComponent.h>
+
+
 
 bool UDataTableToolFunctionLibrary::FillDataTableFromCSVString(UDataTable* DataTable, const FString& CSVString)
 {
@@ -69,25 +72,51 @@ bool UDataTableToolFunctionLibrary::FillDataTableFromJSONFile(UDataTable* DataTa
 void UDataTableToolFunctionLibrary::GetDataTableAsCSVString(UDataTable* DataTable, FString& CSVString)
 {
 	CSVString = FString();
-
+	
 	if (!DataTable || (DataTable->RowStruct == nullptr))
 	{
-
 		return;
 	}
 
-	TArray<TArray<FString>> DataTableRows = DataTable->GetTableData();
-	DataTableRows[0][0] = DataTable->ImportKeyField;
+	// First build array of properties
+	TArray<FProperty*> StructProps;
+	for (TFieldIterator<FProperty> It(DataTable->RowStruct); It; ++It)
+	{
+		FProperty* Prop = *It;
+		check(Prop != nullptr);
+		StructProps.Add(Prop);
+	}
 	
-	for (int32 row = 0; row < DataTableRows.Num(); ++row) {
-		for (int32 col = 0; col < DataTableRows[row].Num(); ++col){
-			CSVString += DataTableRows[row][col];
+	// First row, column titles, taken from properties
+	CSVString += DataTable->ImportKeyField;
+	int index = 0;
+	for (int32 PropIdx = 0; PropIdx < StructProps.Num(); PropIdx++)
+	{
+		CSVString += TEXT(",");
+		FString str = StructProps[PropIdx]->GetName();
+		// 找2次，因为末尾会多生成2次
+		str.FindLastChar('_', index);
+		str = str.Left(index);
+		str.FindLastChar('_', index);
+		str = str.Left(index);
+		CSVString += str;
+	}
+	CSVString += TEXT("\n");
+
+	// Now iterate over rows
+	for (auto RowIt = DataTable->GetRowMap().CreateConstIterator(); RowIt; ++RowIt)
+	{
+		FName RowName = RowIt.Key();
+		CSVString += RowName.ToString();
+
+		uint8* RowData = RowIt.Value();
+		for (int32 PropIdx = 0; PropIdx < StructProps.Num(); PropIdx++)
+		{
 			CSVString += TEXT(",");
+			CSVString += DataTableUtils::GetPropertyValueAsString(StructProps[PropIdx], RowData, EDataTableExportFlags::None);
 		}
 		CSVString += TEXT("\n");
 	}
-
-
 }
 
 void UDataTableToolFunctionLibrary::GetDataTableAsCSVFile(UDataTable* DataTable, const FString& CSVFilePath)
@@ -117,6 +146,7 @@ void UDataTableToolFunctionLibrary::GetDataTableAsJSONString(UDataTable* DataTab
 	{
 		return;
 	}
+
 	JSONString = DataTable->GetTableAsJSON();
 }
 

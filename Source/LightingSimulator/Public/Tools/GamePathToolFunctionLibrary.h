@@ -65,5 +65,8 @@ public:
 	/// InstallDir/WindowsNoEditor/GameName/Content/JSON/
 	/// </summary>
 	UFUNCTION(BlueprintCallable, Category = "Paths", BlueprintPure)
-		static FString GetGameContentJSONDir();
+	static FString GetGameContentJSONDir();
+
+	UFUNCTION(BlueprintCallable, Category = "Paths", BlueprintPure)
+	static FString GetGameLightEntityJSONDir();
 };
