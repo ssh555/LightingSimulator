@@ -4,20 +4,36 @@
 
 #include "CoreMinimal.h"
 #include "Components/StaticMeshComponent.h"
-#include "SaveAndLoadJsonData.h"
+#include "SaveAndLoadData.h"
 #include "LEStaticMeshComponent.generated.h"
+
+//class UStringTable;
 
 /**
  * 
  */
 UCLASS()
-class LIGHTINGSIMULATOR_API ULEStaticMeshComponent : public UStaticMeshComponent, public ISaveAndLoadJsonData
+class LIGHTINGSIMULATOR_API ULEStaticMeshComponent : public UStaticMeshComponent, public ISaveAndLoadData
 {
 	GENERATED_BODY()
 	
-public:
-	virtual TArray<FString> GetDataAsJson(const int deepth) override;
 
-	virtual void SetDataFromJson(TArray<FString> dataStrList, int& deepth) override;
+public:
+
+	virtual FString GetData(const FString& key) override;
+
+	/// <summary>
+	/// 不包括子组件数据
+	/// </summary>
+	/// <param name="deepth"></param>
+	/// <returns></returns>
+	//virtual TArray<FString> GetAllDatas(const int deepth) override;
+
+	virtual void SetData(FString& key, FString& value) override;
+
+
+
+
+
 
 };

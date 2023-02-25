@@ -4,20 +4,33 @@
 
 #include "CoreMinimal.h"
 #include "Components/RectLightComponent.h"
-#include "SaveAndLoadJsonData.h"
+#include "SaveAndLoadData.h"
 #include "LERectLightComponent.generated.h"
+
+class UStringTable;
 
 /**
  * 
  */
 UCLASS()
-class LIGHTINGSIMULATOR_API ULERectLightComponent : public URectLightComponent, public ISaveAndLoadJsonData
+class LIGHTINGSIMULATOR_API ULERectLightComponent : public URectLightComponent, public ISaveAndLoadData
 {
 	GENERATED_BODY()
-	
-public:
-	virtual TArray<FString> GetDataAsJson(const int deepth) override;
+protected:
+	//UStringTable* StrTable;
 
-	virtual void SetDataFromJson(TArray<FString> dataStrList, int& deepth) override;
+
+public:
+
+
+	virtual FString GetData(const FString& key) override;
+
+
+	//virtual TArray<FString> GetAllDatas(const int deepth) override;
+
+
+	virtual void SetData(FString& key, FString& value) override;
+
+
 
 };

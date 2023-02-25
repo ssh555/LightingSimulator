@@ -3,7 +3,7 @@
 
 #include "LightSystem/LogicalLayer/LightEntityHelper.h"
 #include "Tools/GamePathToolFunctionLibrary.h"
-#include "LightSystem/LogicalLayer/SaveAndLoadJsonData.h"
+#include "LightSystem/LogicalLayer/SaveAndLoadData.h"
 #include "LightSystem/LogicalLayer/LightEntity.h"
 #include <HAL/FileManager.h>
 #include <Misc/FileHelper.h>
@@ -13,6 +13,7 @@
 #include <LightSystem/LogicalLayer/LEPointLightComponent.h>
 #include <LightSystem/LogicalLayer/LERectLightComponent.h>
 #include <LightSystem/LogicalLayer/LESpotLightComponent.h>
+#include "LightSystem/LogicalLayer/SaveAndLoadData.h"
 
 ULightEntityHelper::ULightEntityHelper()
 {
@@ -78,20 +79,23 @@ USceneComponent* ULightEntityHelper::CreateSubobject(UObject* obj, FString Class
 	return nullptr;
 }
 
-bool ULightEntityHelper::LoadDataFromJsonFile(ALightEntity* LEData, FString FileName)
+bool ULightEntityHelper::LoadDataFromFile(ALightEntity* LEData, FString FileName)
 {
 	if (LEData == nullptr) {
 		return false;
 	}
-	FileName = UGamePathToolFunctionLibrary::GetGameLightEntityJSONDir() + FileName;
+	if (!FileName.ToLower().Contains(".ledata")) {
+		FileName += ".ledata";
+	}
+	FileName = UGamePathToolFunctionLibrary::GetGameLightEntityDataDir() + FileName;
 	IFileManager& FileManager = IFileManager::Get();
 	if (FileManager.FileExists(*FileName)) {
-		ISaveAndLoadJsonData* ISLData = Cast<ISaveAndLoadJsonData>(LEData->GetRootComponent());
+		ISaveAndLoadData* ISLData = Cast<ISaveAndLoadData>(LEData->GetRootComponent());
 		if (ISLData) {
 			TArray<FString> dataStrList;
 			if (FFileHelper::LoadFileToStringArray(dataStrList, *FileName)) {
 				int deepth = 0;
-				ISLData->SetDataFromJson(dataStrList, deepth);
+				LoadDataToISL(ISLData, dataStrList, deepth);
 				return true;
 			}
 		}
@@ -100,24 +104,99 @@ bool ULightEntityHelper::LoadDataFromJsonFile(ALightEntity* LEData, FString File
 	return false;
 }
 
-bool ULightEntityHelper::SaveDataToJsonFile(ALightEntity* LEData, FString FileName)
+void ULightEntityHelper::LoadDataToISL(ISaveAndLoadData* ISLData, TArray<FString>& dataStrList, int& deepth)
+{
+	int stackNum = 0;
+	FString key, value;
+	ULightEntityHelper::StrStrParsor(dataStrList[deepth++], key, value);
+	// 当前解析的是 [属于自己组件的数据]
+	if (ensureAlways(key == "[")) {
+		++stackNum;
+		// 解析的 ClassType 能对应
+		ULightEntityHelper::StrStrParsor(dataStrList[deepth++], key, value);
+		USceneComponent* owner = Cast<USceneComponent>(ISLData);
+		if (ensureAlways(key == "ClassType" && value == owner->GetClass()->GetName())) {
+			for (; deepth < dataStrList.Num(); ) {
+				ULightEntityHelper::StrStrParsor(dataStrList[deepth++], key, value);
+				// 如果是 [ => 进入子组件
+				if (key == "[") {
+					ULightEntityHelper::StrStrParsor(dataStrList[deepth], key, value);
+					// 解析的 子组件的 ClassType 能对应
+					if (ensureAlways(key == "ClassType")) {
+						USceneComponent* childComp = ULightEntityHelper::CreateSubobject(owner->GetOwner(), value);
+						// 子组件存在
+						if (ensureAlways(childComp)) {
+							//重要，否则无法在细节面板中看到组件
+							owner->GetOwner()->AddInstanceComponent(childComp);
+							//重要，必须要注册组件
+							childComp->RegisterComponent();
+							childComp->AttachToComponent(Cast<USceneComponent>(ISLData), FAttachmentTransformRules::KeepRelativeTransform);
+							LoadDataToISL(Cast<ISaveAndLoadData>(childComp), dataStrList, --deepth);
+							++stackNum;
+						}
+					}
+				}
+				// 如果是 ] => 判断是否为当前组件的 ] 
+				else if (key == "]") {
+					// 遇到当前组件的 ]
+					if (--stackNum == 0) {
+						return;
+					}
+				}
+				// 解析当前组件的数据
+				else {
+					ISLData->SetData(key, value);
+				}
+			}
+		}
+	}
+}
+
+bool ULightEntityHelper::SaveDataToFile(ALightEntity* LEData, FString FileName)
 {
 	if (LEData == nullptr) {
 		return false;
 	}
-	FileName = UGamePathToolFunctionLibrary::GetGameLightEntityJSONDir() + FileName;
+	if (!FileName.ToLower().Contains(".ledata")) {
+		FileName += ".ledata";
+	}
+	FileName = UGamePathToolFunctionLibrary::GetGameLightEntityDataDir() + FileName;
 	FText errorText;
 	IFileManager& FileManager = IFileManager::Get();
-	if (!FileManager.DirectoryExists(*UGamePathToolFunctionLibrary::GetGameLightEntityJSONDir())) {
-		FileManager.MakeDirectory(*UGamePathToolFunctionLibrary::GetGameLightEntityJSONDir());
+	if (!FileManager.DirectoryExists(*UGamePathToolFunctionLibrary::GetGameLightEntityDataDir())) {
+		FileManager.MakeDirectory(*UGamePathToolFunctionLibrary::GetGameLightEntityDataDir());
 	}
 	if (FFileHelper::IsFilenameValidForSaving(FileName, errorText)) {
-		ISaveAndLoadJsonData* ISLData = Cast<ISaveAndLoadJsonData>(LEData->GetRootComponent());
+		ISaveAndLoadData* ISLData = Cast<ISaveAndLoadData>(LEData->GetRootComponent());
 		if (ISLData) {
-			TArray<FString> dataStrList = ISLData->GetDataAsJson(0);
+			TArray<FString> dataStrList = SaveDataFromISL(ISLData, 0);
 			return FFileHelper::SaveStringArrayToFile(dataStrList, *FileName, FFileHelper::EEncodingOptions::ForceUTF8);
 		}
 		return false;
 	}
 	return false;
+}
+
+TArray<FString> ULightEntityHelper::SaveDataFromISL(ISaveAndLoadData* ISLData,const int deepth)
+{
+	TArray<FString> ans;
+
+	FString tabStr = ULightEntityHelper::GetTabStr(deepth);
+
+	FString tabChildStr = ULightEntityHelper::GetTabStr(deepth + 1);
+
+	ans.Add(tabStr + "[");
+
+	ans.Append(ISLData->GetAllDatas(deepth + 1));
+
+	for (USceneComponent* child : Cast<USceneComponent>(ISLData)->GetAttachChildren())
+	{
+		ISaveAndLoadData* ISLData = Cast<ISaveAndLoadData>(child);
+		if (ISLData) {
+			ans.Append(SaveDataFromISL(ISLData, deepth + 1));
+		}
+	}
+
+	ans.Add(tabStr + "]");
+	return ans;
 }

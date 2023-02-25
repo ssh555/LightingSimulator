@@ -3,151 +3,145 @@
 
 #include "LightSystem/LogicalLayer/LERectLightComponent.h"
 #include "LightSystem/LogicalLayer/LightEntityHelper.h"
+#include <Kismet/KismetStringTableLibrary.h>
+#include "Tools/StringTableToolFunctionLibrary.h"
+#include <Internationalization/StringTable.h>
 
-TArray<FString> ULERectLightComponent::GetDataAsJson(const int deepth)
+
+
+
+
+FString ULERectLightComponent::GetData(const FString& key)
 {
-	TArray<FString> ans;
-
-	FString tabStr = ULightEntityHelper::GetTabStr(deepth);
-	ans.Add(tabStr + "[");
-
-	const int Deepth = deepth + 1;
-
-	ans.Add(ULightEntityHelper::StrStrUnParsor("ClassType", this->GetClass()->GetName(), Deepth));
-	ans.Add(ULightEntityHelper::StrStrUnParsor("TransformLocation", this->GetRelativeLocation().ToString(), Deepth));
-	ans.Add(ULightEntityHelper::StrStrUnParsor("TransformRotation", this->GetRelativeRotation().ToString(), Deepth));
-	ans.Add(ULightEntityHelper::StrStrUnParsor("TransformScale", this->GetRelativeScale3D().ToString(), Deepth));
-	ans.Add(ULightEntityHelper::StrStrUnParsor("Intensity", FString::SanitizeFloat(this->Intensity), Deepth));
-	ans.Add(ULightEntityHelper::StrStrUnParsor("LightColor", this->LightColor.ToString(), Deepth));
-	ans.Add(ULightEntityHelper::StrStrUnParsor("AttenuationRadius", FString::SanitizeFloat(this->AttenuationRadius), Deepth));
-	ans.Add(ULightEntityHelper::StrStrUnParsor("SourceWidth", FString::SanitizeFloat(this->SourceWidth), Deepth));
-	ans.Add(ULightEntityHelper::StrStrUnParsor("SourceHeight", FString::SanitizeFloat(this->SourceHeight), Deepth));
-	ans.Add(ULightEntityHelper::StrStrUnParsor("BarnDoorAngle", FString::SanitizeFloat(this->BarnDoorAngle), Deepth));
-	ans.Add(ULightEntityHelper::StrStrUnParsor("BarnDoorLength", FString::SanitizeFloat(this->BarnDoorLength), Deepth));
-
+	if (key == "ClassType") {
+		return this->GetClass()->GetName();
+	}
+	else if (key == "TransformLocation") {
+		return this->GetRelativeLocation().ToString();
+	}
+	else if (key == "TransformRotation") {
+		return this->GetRelativeRotation().ToString();
+	}
+	else if (key == "TransformScale") {
+		return this->GetRelativeScale3D().ToString();
+	}
+	else if (key == "Intensity") {
+		return FString::SanitizeFloat(this->Intensity);
+	}
+	else if (key == "LightColor") {
+		return this->LightColor.ToString();
+	}
+	else if (key == "AttenuationRadius") {
+		return FString::SanitizeFloat(this->AttenuationRadius);
+	}
+	else if (key == "SourceWidth") {
+		return FString::SanitizeFloat(this->SourceWidth);
+	}
+	else if (key == "SourceHeight") {
+		return FString::SanitizeFloat(this->SourceHeight);
+	}
+	else if (key == "BarnDoorAngle") {
+		return FString::SanitizeFloat(this->BarnDoorAngle);
+	}
+	else if (key == "BarnDoorLength") {
+		return FString::SanitizeFloat(this->BarnDoorLength);
+	}
 	// [SourceTexture : Texture] [待定]
-
-	ans.Add(ULightEntityHelper::StrStrUnParsor("Temperature", FString::SanitizeFloat(this->Temperature), Deepth));
-	ans.Add(ULightEntityHelper::StrStrUnParsor("UseTemperature", this->bUseTemperature ? TEXT("true") : TEXT("false"), Deepth));
-	ans.Add(ULightEntityHelper::StrStrUnParsor("AffectsWorld", this->bAffectsWorld ? TEXT("true") : TEXT("false"), Deepth));
-	ans.Add(ULightEntityHelper::StrStrUnParsor("CastShadows", this->CastShadows ? TEXT("true") : TEXT("false"), Deepth));
-	ans.Add(ULightEntityHelper::StrStrUnParsor("IndirectLightingIntensity", FString::SanitizeFloat(this->IndirectLightingIntensity), Deepth));
-	ans.Add(ULightEntityHelper::StrStrUnParsor("VolumetricScatteringIntensity", FString::SanitizeFloat(this->VolumetricScatteringIntensity), Deepth));
-
-
-
-
-	for (USceneComponent* child : this->GetAttachChildren())
-	{
-		ISaveAndLoadJsonData* ISLData = Cast<ISaveAndLoadJsonData>(child);
-		if (ISLData) {
-			ans.Append(ISLData->GetDataAsJson(Deepth));
-		}
+	else if (key == "Temperature") {
+		return FString::SanitizeFloat(this->Temperature);
 	}
-
-	ans.Add(tabStr + "]");
-	return ans;
+	else if (key == "UseTemperature") {
+		return this->bUseTemperature ? TEXT("true") : TEXT("false");
+	}
+	else if (key == "AffectsWorld") {
+		return this->bAffectsWorld ? TEXT("true") : TEXT("false");
+	}
+	else if (key == "CastShadows") {
+		return this->CastShadows ? TEXT("true") : TEXT("false");
+	}
+	else if (key == "IndirectLightingIntensity") {
+		return FString::SanitizeFloat(this->IndirectLightingIntensity);
+	}
+	else if (key == "VolumericScatteringIntensity") {
+		return FString::SanitizeFloat(this->VolumetricScatteringIntensity);
+	}
+	return "";
 }
+//
+//TArray<FString> ULERectLightComponent::GetAllDatas(const int deepth)
+//{
+//	TArray<FString> ans;
+//
+//	TArray<FString> keys = UKismetStringTableLibrary::GetKeysFromStringTable(this->StrTable->GetStringTableId());
+//	for (FString key : keys)
+//	{
+//		ans.Add(ULightEntityHelper::StrStrUnParsor(key, this->GetData(key), deepth));
+//	}
+//
+//
+//	return ans;
+//}
 
-void ULERectLightComponent::SetDataFromJson(TArray<FString> dataStrList, int& deepth)
+void ULERectLightComponent::SetData(FString& key, FString& value)
 {
-	int stackNum = 0;
-	FString key, value;
-	ULightEntityHelper::StrStrParsor(dataStrList[deepth++], key, value);
-	// 当前解析的是 [属于自己组件的数据]
-	if (ensureAlways(key == "[")) {
-		++stackNum;
-		// 解析的 ClassType 能对应
-		ULightEntityHelper::StrStrParsor(dataStrList[deepth++], key, value);
-		if (ensureAlways(key == "ClassType" && value == this->GetClass()->GetName())) {
-			for (; deepth < dataStrList.Num(); ) {
-				ULightEntityHelper::StrStrParsor(dataStrList[deepth++], key, value);
-				// 如果是 [ => 进入子组件
-				if (key == "[") {
-					ULightEntityHelper::StrStrParsor(dataStrList[deepth], key, value);
-					// 解析的 子组件的 ClassType 能对应
-					if (ensureAlways(key == "ClassType")) {
-						USceneComponent* childComp = ULightEntityHelper::CreateSubobject(this->GetOwner(), value);
-						// 子组件存在
-						if (ensureAlways(childComp)) {
-							//重要，否则无法在细节面板中看到组件
-							this->GetOwner()->AddInstanceComponent(childComp);
-							//重要，必须要注册组件
-							childComp->RegisterComponent();
-							childComp->AttachToComponent(this, FAttachmentTransformRules::KeepRelativeTransform);
-							Cast<ISaveAndLoadJsonData>(childComp)->SetDataFromJson(dataStrList, --deepth);
-							++stackNum;
-						}
-					}
-				}
-				// 如果是 ] => 判断是否为当前组件的 ] 
-				else if (key == "]") {
-					// 遇到当前组件的 ]
-					if (--stackNum == 0) {
-						return;
-					}
-				}
-				// 解析当前组件的数据
-				else {
-					if (key == "TransformLocation") {
-						FVector vector;
-						vector.InitFromString(value);
-						this->SetRelativeLocation(vector);
-					}
-					else if (key == "TransformRotation") {
-						FRotator rot;
-						rot.InitFromString(value);
-						this->SetRelativeRotation(rot);
-					}
-					else if (key == "TransformScale") {
-						FVector vector;
-						vector.InitFromString(value);
-						this->SetRelativeScale3D(vector);
-					}
-					else if (key == "Intensity") {
-						this->Intensity = FCString::Atof(*value);
-					}
-					else if (key == "LightColor") {
-						FColor color;
-						color.InitFromString(value);
-						this->LightColor = color;
-					}
-					else if (key == "AttenuationRadius") {
-						this->AttenuationRadius = FCString::Atof(*value);
-					}
-					else if (key == " SourceWidth") {
-						this->SourceWidth = FCString::Atof(*value);
-					}
-					else if (key == " SourceHeight") {
-						this->SourceHeight = FCString::Atof(*value);
-					}
-					else if (key == " BarnDoorAngle") {
-						this->BarnDoorAngle = FCString::Atof(*value);
-					}
-					else if (key == " BarnDoorLength") {
-						this->BarnDoorLength = FCString::Atof(*value);
-					}
-					// [SourceTexture : Texture] [待定]
-					else if (key == " Temperature") {
-						this->Temperature = FCString::Atof(*value);
-					}
-					else if (key == "UseTemperature") {
-						this->bUseTemperature = value.ToBool();
-					}
-					else if (key == "AffectsWorld") {
-						this->bAffectsWorld = value.ToBool();
-					}
-					else if (key == "CastShadows") {
-						this->CastShadows = value.ToBool();
-					}
-					else if (key == " IndirectLightingIntensity") {
-						this->IndirectLightingIntensity = FCString::Atof(*value);
-					}
-					else if (key == " VolumericScatteringIntensity") {
-						this->VolumetricScatteringIntensity = FCString::Atof(*value);
-					}
-				}
-			}
-		}
+	if (key == "TransformLocation") {
+		FVector vector;
+		vector.InitFromString(value);
+		this->SetRelativeLocation(vector);
+	}
+	else if (key == "TransformRotation") {
+		FRotator rot;
+		rot.InitFromString(value);
+		this->SetRelativeRotation(rot);
+	}
+	else if (key == "TransformScale") {
+		FVector vector;
+		vector.InitFromString(value);
+		this->SetRelativeScale3D(vector);
+	}
+	else if (key == "Intensity") {
+		this->SetIntensity(FCString::Atof(*value));
+	}
+	else if (key == "LightColor") {
+		FColor color;
+		color.InitFromString(value);
+		this->SetLightColor(color);
+	}
+	else if (key == "AttenuationRadius") {
+		this->SetAttenuationRadius(FCString::Atof(*value));
+	}
+	else if (key == "SourceWidth") {
+		this->SetSourceWidth(FCString::Atof(*value));
+	}
+	else if (key == "SourceHeight") {
+		this->SetSourceHeight(FCString::Atof(*value));
+	}
+	else if (key == "BarnDoorAngle") {
+		this->SetBarnDoorAngle(FCString::Atof(*value));
+	}
+	else if (key == "BarnDoorLength") {
+		this->SetBarnDoorLength(FCString::Atof(*value));
+	}
+	// [SourceTexture : Texture] [待定]
+	else if (key == "Temperature") {
+		this->SetTemperature(FCString::Atof(*value));
+	}
+	else if (key == "UseTemperature") {
+		this->SetUseTemperature(value.ToBool());
+	}
+	else if (key == "AffectsWorld") {
+		this->bAffectsWorld = value.ToBool();
+	}
+	else if (key == "CastShadows") {
+		this->SetCastShadows(value.ToBool());
+	}
+	else if (key == "IndirectLightingIntensity") {
+		this->SetIndirectLightingIntensity(FCString::Atof(*value));
+	}
+	else if (key == "VolumericScatteringIntensity") {
+		this->SetVolumetricScatteringIntensity(FCString::Atof(*value));
 	}
 }
+
+
+

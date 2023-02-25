@@ -4,20 +4,32 @@
 
 #include "CoreMinimal.h"
 #include "Components/SpotLightComponent.h"
-#include "SaveAndLoadJsonData.h"
+#include "SaveAndLoadData.h"
 #include "LESpotLightComponent.generated.h"
+
+class UStringTable;
 
 /**
  * 
  */
 UCLASS()
-class LIGHTINGSIMULATOR_API ULESpotLightComponent : public USpotLightComponent, public ISaveAndLoadJsonData
+class LIGHTINGSIMULATOR_API ULESpotLightComponent : public USpotLightComponent, public ISaveAndLoadData
 {
 	GENERATED_BODY()
-	
-public:
-	virtual TArray<FString> GetDataAsJson(const int deepth) override;
+protected:
+	//UStringTable* StrTable;
 
-	virtual void SetDataFromJson(TArray<FString> dataStrList, int& deepth) override;
+
+public:
+
+
+	virtual FString GetData(const FString& key) override;
+
+
+	//virtual TArray<FString> GetAllDatas(const int deepth) override;
+
+
+	virtual void SetData(FString& key, FString& value) override;
+
 
 };

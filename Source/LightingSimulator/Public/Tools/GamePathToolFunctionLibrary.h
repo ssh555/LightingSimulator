@@ -68,5 +68,11 @@ public:
 	static FString GetGameContentJSONDir();
 
 	UFUNCTION(BlueprintCallable, Category = "Paths", BlueprintPure)
-	static FString GetGameLightEntityJSONDir();
+	static FString GetGameLightEntityDataDir();
+
+	/// <summary>
+	/// ½öÏÞ pak
+	/// </summary>
+	UFUNCTION(BlueprintCallable, Category = "Paths", BlueprintPure)
+	static FString GetGameLEStringTableDataDir();
 };

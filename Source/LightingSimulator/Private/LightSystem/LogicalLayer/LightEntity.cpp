@@ -28,35 +28,52 @@ ALightEntity::ALightEntity()
 	this->rootComp = CreateDefaultSubobject<ULEStaticMeshComponent>("RootComp");
 	this->SetRootComponent(rootComp);
 
-	ULEDirectionalLightComponent* DirectionalLightComp = CreateDefaultSubobject<ULEDirectionalLightComponent>("DirectionalLightComp");
-	DirectionalLightComp->SetupAttachment(this->RootComponent);
+	//ULEDirectionalLightComponent* DirectionalLightComp = CreateDefaultSubobject<ULEDirectionalLightComponent>("DirectionalLightComp");
+	//DirectionalLightComp->SetupAttachment(this->RootComponent);
 
-	ULEPointLightComponent* PointLightComp = CreateDefaultSubobject<ULEPointLightComponent>("PointLightComp");
-	PointLightComp->SetupAttachment(DirectionalLightComp);
+	//ULEPointLightComponent* PointLightComp = CreateDefaultSubobject<ULEPointLightComponent>("PointLightComp");
+	//PointLightComp->SetupAttachment(DirectionalLightComp);
 
-	ULERectLightComponent* RectLightComp = CreateDefaultSubobject<ULERectLightComponent>("RectLightComp");
-	RectLightComp->SetupAttachment(this->RootComponent);
+	//ULERectLightComponent* RectLightComp = CreateDefaultSubobject<ULERectLightComponent>("RectLightComp");
+	//RectLightComp->SetupAttachment(this->RootComponent);
 
-	ULESpotLightComponent* SpotLightComp = CreateDefaultSubobject<ULESpotLightComponent>("SpotLightComp");
-	SpotLightComp->SetupAttachment(PointLightComp);
-
+	//ULESpotLightComponent* SpotLightComp = CreateDefaultSubobject<ULESpotLightComponent>("SpotLightComp");
+	//SpotLightComp->SetupAttachment(PointLightComp);
 	// Runtime 使用 AttachToComponent
 }
 
-ALightEntity::ALightEntity(FString FileName)
-{
-	this->LoadCompDataFromJSONFile(FileName);
-}
-
-bool ALightEntity::SaveCompDataToJSONFile(FString FileName)
+bool ALightEntity::SaveCompDataToFile(FString FileName)
 {
 	ULightEntityHelper* helper = ULightEntityHelper::GetInstance();
-	return helper->SaveDataToJsonFile(this, FileName);
+	return helper->SaveDataToFile(this, FileName);
 }
 
-bool ALightEntity::LoadCompDataFromJSONFile(FString FileName)
+bool ALightEntity::LoadCompDataFromFile(FString FileName)
 {
 	ULightEntityHelper* helper = ULightEntityHelper::GetInstance();
-	return helper->LoadDataFromJsonFile(this, FileName);
+	return helper->LoadDataFromFile(this, FileName);
+}
+
+bool ALightEntity::AttachComponent(USceneComponent* AttachComp, USceneComponent* OwnComp)
+{
+	// 绑定对象组件不属于 此Entity
+	if (OwnComp->GetOwner() != this || AttachComp == nullptr) {
+		return false;
+	}
+	if (AttachComp->AttachToComponent(OwnComp, FAttachmentTransformRules::KeepRelativeTransform)) {
+		//UE_LOG(LogTemp, Log, TEXT("%d %d"), OwnComp->GetNumChildrenComponents(), rootComp->GetNumChildrenComponents());
+		//重要，否则无法在细节面板中看到组件
+		this->AddInstanceComponent(AttachComp);
+		//重要，必须要注册组件
+		AttachComp->RegisterComponent();
+
+		return true;
+	}
+	return false;
+}
+
+USceneComponent* ALightEntity::CreateSubobject(FString ClassType)
+{
+	return ULightEntityHelper::CreateSubobject(this, ClassType);
 }
 

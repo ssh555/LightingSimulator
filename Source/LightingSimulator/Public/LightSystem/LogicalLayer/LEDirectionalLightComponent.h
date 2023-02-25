@@ -4,21 +4,29 @@
 
 #include "CoreMinimal.h"
 #include "Components/DirectionalLightComponent.h"
-#include "SaveAndLoadJsonData.h"
+#include "SaveAndLoadData.h"
 #include "LEDirectionalLightComponent.generated.h"
+
+class UStringTable;
 
 /**
  * 
  */
 UCLASS()
-class LIGHTINGSIMULATOR_API ULEDirectionalLightComponent : public UDirectionalLightComponent, public ISaveAndLoadJsonData
+class LIGHTINGSIMULATOR_API ULEDirectionalLightComponent : public UDirectionalLightComponent, public ISaveAndLoadData
 {
 	GENERATED_BODY()
-	
+protected:
+	//UStringTable* StrTable;
+
 public:
 
-	virtual TArray<FString> GetDataAsJson(const int deepth) override;
+	virtual FString GetData(const FString& key) override;
 
-	virtual void SetDataFromJson(TArray<FString> dataStrList, int& deepth) override;
+	//virtual TArray<FString> GetAllDatas(const int deepth) override;
+
+	virtual void SetData(FString& key, FString& value) override;
+
+
 
 };

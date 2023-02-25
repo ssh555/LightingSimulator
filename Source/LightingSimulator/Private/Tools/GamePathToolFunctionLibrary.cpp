@@ -43,7 +43,12 @@ FString UGamePathToolFunctionLibrary::GetGameContentJSONDir()
 	return GetGameContentDir() + "JSON/";
 }
 
-FString UGamePathToolFunctionLibrary::GetGameLightEntityJSONDir()
+FString UGamePathToolFunctionLibrary::GetGameLightEntityDataDir()
 {
-	return GetGameContentJSONDir() + "LightEntity/";
+	return GetGameContentDir() + "LightEntityData/";
+}
+
+FString UGamePathToolFunctionLibrary::GetGameLEStringTableDataDir()
+{
+	return "/Game/LightingSimulator/LightSystem/LEDataTable/";
 }

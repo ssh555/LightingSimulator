@@ -7,6 +7,7 @@
 #include "LightEntityHelper.generated.h"
 
 class ALightEntity;
+class ISaveAndLoadData;
 
 /**
  * 
@@ -32,20 +33,20 @@ public:
 	/// :左侧为key,右侧为value, 返回时自动去除两侧的"和空格
 	/// 若找不到:，直接返回key = str, value = "
 	/// </summary>
-	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "LightEntity|StringTools")
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "LightEntityHelper|StringTools")
 	static void StrStrParsor(const FString& str, FString& key, FString& value);
 
 	/// <summary>
 	/// 组合为 "key" : "value" 格式
 	/// </summary>
-	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "LightEntity|StringTools")
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "LightEntityHelper|StringTools")
 	static FString StrStrUnParsor(FString key, FString value, int tabNum = 0);
 
 	/// <summary>
 	/// 根据 ClassType 生成对应的 UObject
 	/// 只有特定的一些预设可以生成
 	/// </summary>
-	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "LightEntity|ClassTools")
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "LightEntityHelper|ClassTools")
 	static USceneComponent* CreateSubobject(UObject* obj, FString ClassType);
 
 
@@ -53,15 +54,21 @@ public:
 protected:
 	TMap<FString, ALightEntity*> LightEntityMaps;
 
+
+
 public:
 	/// <summary>
 	/// 只需要传入文件名称，会在方法内部补全路径，即指定路径
 	/// </summary>
-	bool LoadDataFromJsonFile(ALightEntity* LEData, FString FileName);
+	bool LoadDataFromFile(ALightEntity* LEData, FString FileName);
+
+	void LoadDataToISL(ISaveAndLoadData* ISLData, TArray<FString>& dataStrList, int& deepth);
 	
 	/// <summary>
 	/// 只需要传入文件名称，会在方法内部补全路径，即指定路径
 	/// </summary>
-	bool SaveDataToJsonFile(ALightEntity* LEData, FString FileName);
+	bool SaveDataToFile(ALightEntity* LEData, FString FileName);
+
+	TArray<FString> SaveDataFromISL(ISaveAndLoadData* ISLData, const int deepth);
 
 };
