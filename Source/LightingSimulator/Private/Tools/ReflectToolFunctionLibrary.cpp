@@ -310,4 +310,43 @@ bool UReflectToolFunctionLibrary::ExeFunction(UObject* Target, FName FunctionNam
 	return false;
 }
 
+template<typename RetValue>
+RetValue UReflectToolFunctionLibrary::ExeGetFunction(UObject* Target, FName FunctionName, RetValue failedValue)
+{
+	if (Target == nullptr) {
+		return failedValue;
+	}
+	UFunction* Func = Target->FindFunction(FunctionName);
+	if (ensureAlways(Func)) {
+
+		// 1. 给方法所有参数分配空间,并初始化
+		void* AllFuncParam = (uint8*)(FMemory_Alloca(Func->ParmsSize));
+
+		bool bHasReturnParam = Func->ReturnValueOffset != MAX_uint16;
+		// 没有返回值
+		if (!bHasReturnParam) {
+			return failedValue;
+		}
+		int32 SizeIn = bHasReturnParam ? Func->ReturnValueOffset : Func->ParmsSize;
+
+		FMemory::Memzero(AllFuncParam, SizeIn);
+
+		// 2. 创建FFrame
+		FFrame Frame(nullptr, Func, AllFuncParam);
+
+		//如果有返回值，确定返回值的地址
+		RetValue* ReturnValueAddress = bHasReturnParam ? (RetValue*)AllFuncParam + Func->ReturnValueOffset : nullptr;
+
+		// 3. 调用Invoke
+		Func->Invoke(Target, Frame, ReturnValueAddress);
+
+
+		// 4. 获取返回值
+		//RetValue* ResValue = (RetValue*)(AllFuncParam);
+
+		return *ReturnValueAddress;
+	}
+	return failedValue;
+}
+
 

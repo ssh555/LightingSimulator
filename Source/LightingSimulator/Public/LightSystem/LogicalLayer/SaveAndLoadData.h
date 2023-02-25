@@ -36,6 +36,9 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "SaveAndLoad")
 	virtual TArray<FString> GetAllDatas(const int deepth);
 
+	/// <summary>
+	/// 不包括子组件数据
+	/// </summary>
 	UFUNCTION(BlueprintCallable, Category = "SaveAndLoad")
 	virtual void SetData(FString& key, FString& value);
 

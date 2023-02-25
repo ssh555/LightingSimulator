@@ -16,14 +16,10 @@ UCLASS()
 class LIGHTINGSIMULATOR_API ULEDirectionalLightComponent : public UDirectionalLightComponent, public ISaveAndLoadData
 {
 	GENERATED_BODY()
-protected:
-	//UStringTable* StrTable;
 
 public:
 
 	virtual FString GetData(const FString& key) override;
-
-	//virtual TArray<FString> GetAllDatas(const int deepth) override;
 
 	virtual void SetData(FString& key, FString& value) override;
 

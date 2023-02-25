@@ -117,6 +117,11 @@ public:
 	template<typename T, typename U, typename P, typename Q, typename W>
 	UFUNCTION(BlueprintCallable, Category = "ReflectTool|ExeFunction")
 	static bool ExeFunction(UObject* Target, FName FunctionName, T& param1, U& param2, P& param3, Q& param4, W& param5);
+
+	template<typename RetValue>
+	UFUNCTION(BlueprintCallable, Category = "ReflectTool|ExeFunction")
+	static RetValue ExeGetFunction(UObject* Target, FName FunctionName, RetValue failedValue);
+
 #pragma endregion
 
 

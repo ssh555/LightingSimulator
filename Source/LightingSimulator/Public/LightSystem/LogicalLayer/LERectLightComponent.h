@@ -26,9 +26,6 @@ public:
 	virtual FString GetData(const FString& key) override;
 
 
-	//virtual TArray<FString> GetAllDatas(const int deepth) override;
-
-
 	virtual void SetData(FString& key, FString& value) override;
 
 

@@ -12,7 +12,7 @@ class UStringTable;
 /**
  * 
  */
-UCLASS()
+UCLASS(ClassGroup = (Custom), meta = (BlueprintSpawnableComponent))
 class LIGHTINGSIMULATOR_API ULEPointLightComponent : public UPointLightComponent, public ISaveAndLoadData
 {
 	GENERATED_BODY()
@@ -24,12 +24,5 @@ public:
 
 	virtual FString GetData(const FString& key) override;
 
-
-	//virtual TArray<FString> GetAllDatas(const int deepth) override;
-
-
 	virtual void SetData(FString& key, FString& value) override;
-
-
-
 };

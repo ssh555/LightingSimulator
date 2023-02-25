@@ -62,19 +62,7 @@ FString ULEPointLightComponent::GetData(const FString& key)
 	}
 	return "";
 }
-//
-//TArray<FString> ULEPointLightComponent::GetAllDatas(const int deepth)
-//{
-//	TArray<FString> ans;
-//
-//	TArray<FString> keys = UKismetStringTableLibrary::GetKeysFromStringTable(this->StrTable->GetStringTableId());
-//	for (FString key : keys)
-//	{
-//		ans.Add(ULightEntityHelper::StrStrUnParsor(key, this->GetData(key), deepth));
-//	}
-//
-//	return ans;
-//}
+
 
 void ULEPointLightComponent::SetData(FString& key, FString& value)
 {

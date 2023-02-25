@@ -22,13 +22,6 @@ public:
 
 	virtual FString GetData(const FString& key) override;
 
-	/// <summary>
-	/// 不包括子组件数据
-	/// </summary>
-	/// <param name="deepth"></param>
-	/// <returns></returns>
-	//virtual TArray<FString> GetAllDatas(const int deepth) override;
-
 	virtual void SetData(FString& key, FString& value) override;
 
 
