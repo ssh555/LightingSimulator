@@ -8,12 +8,25 @@
 #include <Internationalization/StringTable.h>
 
 
+#include "LightSystem/LogicalLayer/LEOpFile.h"
+#include "LightSystem/LogicalLayer/LETimeline.h"
+#include <Kismet/KismetMaterialLibrary.h>
 
+
+ULESpotLightComponent::ULESpotLightComponent()
+{
+	this->PrimaryComponentTick.bCanEverTick = true;
+}
 
 FString ULESpotLightComponent::GetData(const FString& key)
 {
 	if (key == "ClassType") {
 		return this->GetClass()->GetName();
+	}
+	else if (key == "Name") {
+		FString ans;
+		this->GetName(ans);
+		return ans;
 	}
 	else if (key == "TransformLocation") {
 		return this->GetRelativeLocation().ToString();
@@ -39,6 +52,9 @@ FString ULESpotLightComponent::GetData(const FString& key)
 	else if (key == "OuterConeAngle") {
 		return FString::SanitizeFloat(this->OuterConeAngle);
 	}
+	else if (key == "SourceRadius") {
+		return FString::SanitizeFloat(this->SourceRadius);
+	}
 	else if (key == "SoftSourceRadius") {
 		return FString::SanitizeFloat(this->SoftSourceRadius);
 	}
@@ -63,15 +79,30 @@ FString ULESpotLightComponent::GetData(const FString& key)
 	else if (key == "VolumericScatteringIntensity") {
 		return FString::SanitizeFloat(this->VolumetricScatteringIntensity);
 	}
+	else if (key == "LEOpFile") {
+		return this->TickFile->FileName;
+	}
+	else if (key == "LETimeline") {
+		return this->TimeFile->FileName;
+	}
+	else if (key == "LightFunctionMaterialPath") {
+		if (!this->LightFunctionMaterial) {
+			return "None";
+		}
+		return this->MatPath;
+	}
 	return "";
 }
 
-void ULESpotLightComponent::SetData(FString& key, FString& value)
+void ULESpotLightComponent::SetData(const FString& key, const FString& value)
 {
 	if (key == "TransformLocation") {
 		FVector vector;
 		vector.InitFromString(value);
 		this->SetRelativeLocation(vector);
+	}
+	else if (key == "Name") {
+		this->Rename(*value);
 	}
 	else if (key == "TransformRotation") {
 		FRotator rot;
@@ -100,6 +131,9 @@ void ULESpotLightComponent::SetData(FString& key, FString& value)
 	else if (key == "OuterConeAngle") {
 		this->SetOuterConeAngle(FCString::Atof(*value));
 	}
+	else if (key == "SourceRadius") {
+		this->SetSourceRadius(FCString::Atof(*value));
+	}
 	else if (key == "SoftSourceRadius") {
 		this->SetSoftSourceRadius(FCString::Atof(*value));
 	}
@@ -124,5 +158,34 @@ void ULESpotLightComponent::SetData(FString& key, FString& value)
 	else if (key == "VolumericScatteringIntensity") {
 		this->SetVolumetricScatteringIntensity(FCString::Atof(*value));
 	}
+	else if (key == "LEOpFile") {
+		this->TickFile->SetFile(value, this);
+	}
+	else if (key == "LETimeline") {
+		this->TimeFile->SetFile(value, this);
+	}
+	else if (key == "LightFunctionMaterialPath") {
+		if (value != "None") {
+			this->MatPath = value;
+			this->MatInst = UKismetMaterialLibrary::CreateDynamicMaterialInstance(this, LoadObject<UMaterialInterface>(this, *value));
+			this->SetLightFunctionMaterial(this->MatInst);
+		}
+	}
 }
+
+
+void ULESpotLightComponent::BeginPlay()
+{
+	Super::BeginPlay();
+	this->InitFile();
+
+}
+
+void ULESpotLightComponent::TickComponent(float DeltaTime, enum ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
+{
+	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
+	this->Update(DeltaTime, TickType, ThisTickFunction);
+}
+
+
 

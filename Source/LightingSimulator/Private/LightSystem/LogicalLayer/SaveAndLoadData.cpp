@@ -27,7 +27,7 @@ TArray<FString> ISaveAndLoadData::GetAllDatas(const int deepth)
 	return ans;
 }
 
-void ISaveAndLoadData::SetData(FString& key, FString& value)
+void ISaveAndLoadData::SetData(const FString& key, const FString& value)
 {
 	return;
 }

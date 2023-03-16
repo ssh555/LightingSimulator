@@ -75,4 +75,10 @@ public:
 	/// </summary>
 	UFUNCTION(BlueprintCallable, Category = "Paths", BlueprintPure)
 	static FString GetGameLEStringTableDataDir();
+
+	UFUNCTION(BlueprintCallable, Category = "Paths", BlueprintPure)
+	static FString GetGameLEOPFile();
+
+	UFUNCTION(BlueprintCallable, Category = "Paths", BlueprintPure)
+	static FString GetGameLETimeline();
 };

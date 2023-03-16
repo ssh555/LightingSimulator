@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "Components/PointLightComponent.h"
 #include "SaveAndLoadData.h"
+#include "LEOperationInterface.h"
 #include "LEPointLightComponent.generated.h"
 
 class UStringTable;
@@ -12,8 +13,8 @@ class UStringTable;
 /**
  * 
  */
-UCLASS(ClassGroup = (Custom), meta = (BlueprintSpawnableComponent))
-class LIGHTINGSIMULATOR_API ULEPointLightComponent : public UPointLightComponent, public ISaveAndLoadData
+UCLASS(ClassGroup = (LightEntity), meta = (BlueprintSpawnableComponent))
+class LIGHTINGSIMULATOR_API ULEPointLightComponent : public UPointLightComponent, public ISaveAndLoadData, public ILEOperationInterface
 {
 	GENERATED_BODY()
 protected:
@@ -21,8 +22,14 @@ protected:
 
 
 public:
-
+	ULEPointLightComponent();
 	virtual FString GetData(const FString& key) override;
 
-	virtual void SetData(FString& key, FString& value) override;
+	virtual void SetData(const FString& key, const FString& value) override;
+
+	virtual void BeginPlay() override;
+
+
+	virtual void TickComponent(float DeltaTime, enum ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+
 };

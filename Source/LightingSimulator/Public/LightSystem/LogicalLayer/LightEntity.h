@@ -26,22 +26,34 @@ public:
 	/// <summary>
 	/// 将 此类的 Component 数据存入 JSON 文件
 	/// </summary>
-	UFUNCTION(BlueprintCallable, Category = "SaveAndLoad")
+	UFUNCTION(BlueprintCallable, Category = "LightEntity|SaveAndLoad")
 	bool SaveCompDataToFile(FString FileName);
 
 	/// <summary>
 	/// 从 JSON 文件中读取数据并初始化此类
 	/// </summary>
-	UFUNCTION(BlueprintCallable, Category = "SaveAndLoad")
+	UFUNCTION(BlueprintCallable, Category = "LightEntity|SaveAndLoad")
 	bool LoadCompDataFromFile(FString FileName);
 
 	/// <summary>
 	/// 将 AttachComp 绑定到 OwnComp
 	/// OwnComp 必须是此Entity (AActor) 已经 AttachComponents
 	/// </summary>
-	UFUNCTION(BlueprintCallable, Category = "Components")
+	UFUNCTION(BlueprintCallable, Category = "LightEntity|Components")
 	bool AttachComponent(USceneComponent* AttachComp, USceneComponent* OwnComp);
 
 	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "LightEntity|ClassTools")
 	USceneComponent* CreateSubobject(FString ClassType);
+
+	UFUNCTION(BlueprintCallable, Category = "LightEntity|Components")
+	void DestroyAllChildren();
+
+	UFUNCTION(BlueprintCallable, Category = "LightEntity|Components")
+	void DestroyLEComponent(USceneComponent* Comp);
+
+	UFUNCTION(BlueprintCallable, Category = "LightEntity|Components")
+	bool RenameComp(USceneComponent* Comp, FString newName);
+
+	UFUNCTION(BlueprintCallable, Category = "LightEntity|Components")
+	bool AddLEToComp(USceneComponent* OwnComp, FString LEFilePath);
 };

@@ -15,6 +15,8 @@
 #include <LightSystem/LogicalLayer/LESpotLightComponent.h>
 #include "LightSystem/LogicalLayer/SaveAndLoadData.h"
 
+int ULightEntityHelper::curNum = 0;
+
 ULightEntityHelper::ULightEntityHelper()
 {
 
@@ -62,19 +64,19 @@ FString ULightEntityHelper::StrStrUnParsor(FString key, FString value, int tabNu
 USceneComponent* ULightEntityHelper::CreateSubobject(UObject* obj, FString ClassType)
 {
 	if (ClassType == ULEStaticMeshComponent::StaticClass()->GetName()) {
-		return NewObject<ULEStaticMeshComponent>(obj, "StaticMeshComp");
+		return NewObject<ULEStaticMeshComponent>(obj, FName(*("StaticMeshComp_" + FString::FromInt(curNum++))));
 	}
 	else if (ClassType == ULEDirectionalLightComponent::StaticClass()->GetName()) {
-		return NewObject<ULEDirectionalLightComponent>(obj, "DirectionalLightComp");
+		return NewObject<ULEDirectionalLightComponent>(obj, FName(*("DirectionalLightComp_" + FString::FromInt(curNum++))));
 	}
 	else if (ClassType == ULEPointLightComponent::StaticClass()->GetName()) {
-		return NewObject<ULEPointLightComponent>(obj, "PointLightComp");
+		return NewObject<ULEPointLightComponent>(obj, FName(*("PointLightComp_" + FString::FromInt(curNum++))));
 	}
 	else if (ClassType == ULERectLightComponent::StaticClass()->GetName()) {
-		return NewObject<ULERectLightComponent>(obj, "RectLightComp");
+		return NewObject<ULERectLightComponent>(obj, FName(*("RectLightComp_" + FString::FromInt(curNum++))));
 	}
 	else if (ClassType == ULESpotLightComponent::StaticClass()->GetName()) {
-		return NewObject<ULESpotLightComponent>(obj, "SpotLightComp");
+		return NewObject<ULESpotLightComponent>(obj, FName(*("SpotLightComp_" + FString::FromInt(curNum++))));
 	}
 	return nullptr;
 }
@@ -92,6 +94,7 @@ bool ULightEntityHelper::LoadDataFromFile(ALightEntity* LEData, FString FileName
 	if (FileManager.FileExists(*FileName)) {
 		ISaveAndLoadData* ISLData = Cast<ISaveAndLoadData>(LEData->GetRootComponent());
 		if (ISLData) {
+			LEData->DestroyAllChildren();
 			TArray<FString> dataStrList;
 			if (FFileHelper::LoadFileToStringArray(dataStrList, *FileName)) {
 				int deepth = 0;
@@ -132,7 +135,7 @@ void ULightEntityHelper::LoadDataToISL(ISaveAndLoadData* ISLData, TArray<FString
 							childComp->RegisterComponent();
 							childComp->AttachToComponent(Cast<USceneComponent>(ISLData), FAttachmentTransformRules::KeepRelativeTransform);
 							LoadDataToISL(Cast<ISaveAndLoadData>(childComp), dataStrList, --deepth);
-							++stackNum;
+							//++stackNum;
 						}
 					}
 				}

@@ -36,11 +36,11 @@ public:
 	UFUNCTION(BlueprintCallable, DisplayName = "Get Table As CSV File", Category = "DataTable")
 	static void GetDataTableAsCSVFile(UDataTable* DataTable, const FString& CSVFilePath);
 
-	UFUNCTION(BlueprintCallable, DisplayName = "Get Table As JSON String", Category = "DataTable")
-	static void GetDataTableAsJSONString(UDataTable* DataTable, FString& JSONString);
+	//UFUNCTION(BlueprintCallable, DisplayName = "Get Table As JSON String", Category = "DataTable")
+	//static void GetDataTableAsJSONString(UDataTable* DataTable, FString& JSONString);
 
-	UFUNCTION(BlueprintCallable, DisplayName = "Get Table As JSON File", Category = "DataTable")
-	static void GetDataTableAsJSONFile(UDataTable* DataTable, const FString& JSONFilePath);
+	//UFUNCTION(BlueprintCallable, DisplayName = "Get Table As JSON File", Category = "DataTable")
+	//static void GetDataTableAsJSONFile(UDataTable* DataTable, const FString& JSONFilePath);
 #pragma endregion
 
 

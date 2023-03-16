@@ -17,6 +17,9 @@ class LIGHTINGSIMULATOR_API ULightEntityHelper : public UObject
 {
 	GENERATED_BODY()
 
+private:
+	static int curNum;
+
 protected:
 	ULightEntityHelper();
 

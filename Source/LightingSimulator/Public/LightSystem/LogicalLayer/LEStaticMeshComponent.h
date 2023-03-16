@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "Components/StaticMeshComponent.h"
 #include "SaveAndLoadData.h"
+#include "LEOperationInterface.h"
 #include "LEStaticMeshComponent.generated.h"
 
 //class UStringTable;
@@ -12,20 +13,25 @@
 /**
  * 
  */
-UCLASS()
-class LIGHTINGSIMULATOR_API ULEStaticMeshComponent : public UStaticMeshComponent, public ISaveAndLoadData
+UCLASS(ClassGroup = (LightEntity), meta = (BlueprintSpawnableComponent))
+class LIGHTINGSIMULATOR_API ULEStaticMeshComponent : public UStaticMeshComponent, public ISaveAndLoadData, public ILEOperationInterface
 {
 	GENERATED_BODY()
 	
 
 public:
+	ULEStaticMeshComponent();
 
 	virtual FString GetData(const FString& key) override;
 
-	virtual void SetData(FString& key, FString& value) override;
+	
+	virtual void SetData(const FString& key, const FString& value) override;
 
 
+	virtual void BeginPlay() override;
 
+
+	virtual void TickComponent(float DeltaTime, enum ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
 
 

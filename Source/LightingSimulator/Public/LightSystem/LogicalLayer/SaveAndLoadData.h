@@ -10,7 +10,7 @@ class UClass;
 class UStringTable;
 
 // This class does not need to be modified.
-UINTERFACE(MinimalAPI, meta = (CannotImplementInterfaceInBlueprint))
+UINTERFACE(MinimalAPI, meta = (CannotImplementInterfaceInBlueprint), Blueprintable, BlueprintType)
 class USaveAndLoadData : public UInterface
 {
 	GENERATED_BODY()
@@ -40,7 +40,11 @@ public:
 	/// 不包括子组件数据
 	/// </summary>
 	UFUNCTION(BlueprintCallable, Category = "SaveAndLoad")
-	virtual void SetData(FString& key, FString& value);
+	virtual void SetData(const FString& key, const FString& value);
 
 	virtual UStringTable* GetStrTable();
+
+	FString MatPath = "None";
+
+	UMaterialInstanceDynamic* MatInst;
 };

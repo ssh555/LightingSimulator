@@ -138,33 +138,33 @@ void UDataTableToolFunctionLibrary::GetDataTableAsCSVFile(UDataTable* DataTable,
 	FFileHelper::SaveStringToFile(CSVString, *str, FFileHelper::EEncodingOptions::ForceUTF8);
 }
 
-void UDataTableToolFunctionLibrary::GetDataTableAsJSONString(UDataTable* DataTable, FString& JSONString)
-{
-	JSONString = FString();
-
-	if (!DataTable || (DataTable->RowStruct == nullptr))
-	{
-		return;
-	}
-
-	JSONString = DataTable->GetTableAsJSON();
-}
-
-void UDataTableToolFunctionLibrary::GetDataTableAsJSONFile(UDataTable* DataTable, const FString& JSONFilePath)
-{
-	FString JSONString;
-	GetDataTableAsJSONString(DataTable, JSONString);
-	if (JSONString.Len() == 0)
-	{
-		return;
-	}
-	FString str = JSONFilePath;
-	str = str.ToLower();
-	if (!str.Contains(".json")) {
-		str = JSONFilePath + ".json";
-	}
-	else {
-		str = JSONFilePath;
-	}
-	FFileHelper::SaveStringToFile(JSONString, *str, FFileHelper::EEncodingOptions::ForceUTF8);
-}
+//void UDataTableToolFunctionLibrary::GetDataTableAsJSONString(UDataTable* DataTable, FString& JSONString)
+//{
+//	JSONString = FString();
+//
+//	if (!DataTable || (DataTable->RowStruct == nullptr))
+//	{
+//		return;
+//	}
+//
+//	JSONString = DataTable->GetTableAsJSON();
+//}
+//
+//void UDataTableToolFunctionLibrary::GetDataTableAsJSONFile(UDataTable* DataTable, const FString& JSONFilePath)
+//{
+//	FString JSONString;
+//	GetDataTableAsJSONString(DataTable, JSONString);
+//	if (JSONString.Len() == 0)
+//	{
+//		return;
+//	}
+//	FString str = JSONFilePath;
+//	str = str.ToLower();
+//	if (!str.Contains(".json")) {
+//		str = JSONFilePath + ".json";
+//	}
+//	else {
+//		str = JSONFilePath;
+//	}
+//	FFileHelper::SaveStringToFile(JSONString, *str, FFileHelper::EEncodingOptions::ForceUTF8);
+//}

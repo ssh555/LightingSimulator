@@ -52,3 +52,13 @@ FString UGamePathToolFunctionLibrary::GetGameLEStringTableDataDir()
 {
 	return "/Game/LightingSimulator/LightSystem/LEDataTable/";
 }
+
+FString UGamePathToolFunctionLibrary::GetGameLEOPFile()
+{
+	return GetGameContentDir() + "LEOpFile/";
+}
+
+FString UGamePathToolFunctionLibrary::GetGameLETimeline()
+{
+	return GetGameContentDir() + "LETimeline/";
+}

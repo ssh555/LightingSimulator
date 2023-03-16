@@ -6,15 +6,30 @@
 #include "Tools/StringTableToolFunctionLibrary.h"
 #include <Kismet/KismetStringTableLibrary.h>
 #include <Internationalization/StringTable.h>
+#include "LightSystem/LogicalLayer/LEOpFile.h"
+#include "LightSystem/LogicalLayer/LETimeline.h"
+#include <Materials/MaterialInterface.h>
+#include <LightSystem/LogicalLayer/LightEntity.h>
+#include <Kismet/KismetMaterialLibrary.h>
 
 
 
 
+ULEDirectionalLightComponent::ULEDirectionalLightComponent()
+{
+	this->PrimaryComponentTick.bCanEverTick = true;
+
+}
 
 FString ULEDirectionalLightComponent::GetData(const FString& key)
 {
 	if (key == "ClassType") {
 		return this->GetClass()->GetName();
+	}
+	else if (key == "Name") {
+		FString ans;
+		this->GetName(ans);
+		return ans;
 	}
 	else if (key == "TransformLocation") {
 		return this->GetRelativeLocation().ToString();
@@ -55,16 +70,31 @@ FString ULEDirectionalLightComponent::GetData(const FString& key)
 	else if (key == "VolumericScatteringIntensity") {
 		return FString::SanitizeFloat(this->VolumetricScatteringIntensity);
 	}
+	else if (key == "LEOpFile") {
+		return this->TickFile->FileName;
+	}
+	else if (key == "LETimeline") {
+		return this->TimeFile->FileName;
+	}
+	else if (key == "LightFunctionMaterialPath") {
+		if (!this->LightFunctionMaterial) {
+			return "None";
+		}
+		return this->MatPath;
+	}
 	return "";
 }
 
 
-void ULEDirectionalLightComponent::SetData(FString& key, FString& value)
+void ULEDirectionalLightComponent::SetData(const FString& key, const FString& value)
 {
 	if (key == "TransformLocation") {
 		FVector vector;
 		vector.InitFromString(value);
 		this->SetRelativeLocation(vector);
+	}
+	else if (key == "Name") {
+		this->Rename(*value);
 	}
 	else if (key == "TransformRotation") {
 		FRotator rot;
@@ -108,4 +138,31 @@ void ULEDirectionalLightComponent::SetData(FString& key, FString& value)
 	else if (key == "VolumericScatteringIntensity") {
 		this->SetVolumetricScatteringIntensity(FCString::Atof(*value));
 	}
+	else if (key == "LEOpFile") {
+		this->TickFile->SetFile(value, this);
+	}
+	else if (key == "LETimeline") {
+		this->TimeFile->SetFile(value, this);
+	}
+	else if (key == "LightFunctionMaterialPath") {
+		if (value != "None") {
+			this->MatPath = value;
+			this->MatInst = UKismetMaterialLibrary::CreateDynamicMaterialInstance(this, LoadObject<UMaterialInterface>(this, *value));
+			this->SetLightFunctionMaterial(this->MatInst);
+		}
+	}
 }
+
+void ULEDirectionalLightComponent::BeginPlay()
+{
+	Super::BeginPlay();
+	this->InitFile();
+
+}
+
+void ULEDirectionalLightComponent::TickComponent(float DeltaTime, enum ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
+{
+	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
+	this->Update(DeltaTime, TickType, ThisTickFunction);
+}
+

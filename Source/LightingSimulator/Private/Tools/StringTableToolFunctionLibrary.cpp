@@ -2,7 +2,6 @@
 
 
 #include "Tools/StringTableToolFunctionLibrary.h"
-#include <Factories/StringTableFactory.h>
 #include <Internationalization/StringTable.h>
 #include "Tools/GamePathToolFunctionLibrary.h"
 #include <UObject/UObjectGlobals.h>
