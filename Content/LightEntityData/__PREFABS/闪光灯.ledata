@@ -1,0 +1,35 @@
+﻿[
+	ClassType : LEStaticMeshComponent
+	TransformLocation : X=0.000 Y=0.000 Z=0.000
+	TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+	TransformScale : X=1.000 Y=1.000 Z=1.000
+	StaticMeshPath : None
+	Name : RootComp
+	LEOpFile : .leop
+	LETimeline : .letl
+	MaterialPath : None
+	[
+		ClassType : LESpotLightComponent
+		TransformLocation : X=0.000 Y=0.000 Z=100.000
+		TransformRotation : P=-90.000000 Y=0.000000 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		Intensity : 10000.0
+		LightColor : (R=255,G=0,B=0,A=255)
+		AttenuationRadius : 1000.0
+		InnerConeAngle : 0.0
+		OuterConeAngle : 60.0
+		SoftSourceRadius : 0.0
+		SourceLength : 0.0
+		Temperature : 6500.0
+		UseTemperature : false
+		AffectsWorld : true
+		CastShadows : true
+		IndirectLightingIntensity : 1.0
+		VolumericScatteringIntensity : 1.0
+		Name : SpotLightComp_0
+		SourceRadius : 0.0
+		LEOpFile : .leop
+		LETimeline : .letl
+		LightFunctionMaterialPath : /Game/LightingSimulator/Meshes/Materials/Flicker_Tut.Flicker_Tut
+	]
+]

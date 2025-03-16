@@ -1,0 +1,4 @@
+VOID
+
+SETMAT_VECTOR Color (R=10,G=11,B=251,A=0)
+SETMAT_SCALAR Brighness 1

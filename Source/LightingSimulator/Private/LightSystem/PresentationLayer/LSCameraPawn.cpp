@@ -20,8 +20,8 @@ ALSCameraPawn::ALSCameraPawn()
 	this->CameraComp->SetupAttachment(this->RootComponent);
 	this->SetRootComponent(this->CameraComp);
 
-	this->cameraMoveSpeed = 15;
-	this->cameraRotSpeed = 1;
+	this->cameraMoveSpeed = 50;
+	this->cameraRotSpeed = 2;
 
 
 }
@@ -142,11 +142,11 @@ void ALSCameraPawn::CameraMouseWheelTransform(float value)
 
 void ALSCameraPawn::ShowHideMainUI()
 {
-	if (this->MainUI->IsInViewport()) {
-		this->MainUI->RemoveFromViewport();
+	if (this->MainUI->Visibility == ESlateVisibility::SelfHitTestInvisible) {
+		this->MainUI->SetVisibility(ESlateVisibility::Collapsed);
 	}
 	else {
-		this->MainUI->AddToViewport();
+		this->MainUI->SetVisibility(ESlateVisibility::SelfHitTestInvisible);
 	}
 }
 

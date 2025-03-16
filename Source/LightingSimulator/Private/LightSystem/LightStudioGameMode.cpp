@@ -29,6 +29,10 @@ ALightStudioGameMode::ALightStudioGameMode()
 {
 	this->DefaultPawnClass = ALSCameraPawn::StaticClass();
 	ALightStudioGameMode::instance = this;
+
+	ALightStudioGameMode::bIsStart = false;
+
+	ALightStudioGameMode::bIsPause = false;
 	//UGameplayStatics::SetViewportMouseCaptureMode(this, EMouseCaptureMode::NoCapture);
 }
 

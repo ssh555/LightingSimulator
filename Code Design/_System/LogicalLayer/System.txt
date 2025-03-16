@@ -1,0 +1,2 @@
+// 基础 SystemClass 管理所有 Entity 和 Component
+// 预留，还没想好怎么用

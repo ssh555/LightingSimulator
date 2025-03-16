@@ -66,6 +66,24 @@ FString ULEStaticMeshComponent::GetData(const FString& key)
 		}
 		return this->MatPath;
 	}
+	else if (key == "Rotation_Pitch") {
+		return FString::SanitizeFloat(this->GetRelativeRotation().Pitch);
+	}
+	else if (key == "Rotation_Roll") {
+		return FString::SanitizeFloat(this->GetRelativeRotation().Roll);
+	}
+	else if (key == "Rotation_Yaw") {
+		return FString::SanitizeFloat(this->GetRelativeRotation().Yaw);
+	}
+	else if (key == "Scale_X") {
+		return FString::SanitizeFloat(this->GetRelativeScale3D().X);
+	}
+	else if (key == "Scale_Y") {
+		return FString::SanitizeFloat(this->GetRelativeScale3D().Y);
+	}
+	else if (key == "Scale_Z") {
+		return FString::SanitizeFloat(this->GetRelativeScale3D().Z);
+	}
 	return "";
 }
 

@@ -1,0 +1,2937 @@
+﻿[
+	ClassType : LEStaticMeshComponent
+	TransformLocation : X=0.000 Y=0.000 Z=0.000
+	TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+	TransformScale : X=1.000 Y=1.000 Z=1.000
+	StaticMeshPath : None
+	Name : RootComp
+	LEOpFile : .leop
+	LETimeline : .letl
+	MaterialPath : None
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=0.000 Y=0.000 Z=50.100
+		TransformRotation : P=0.000000 Y=89.999954 R=0.000000
+		TransformScale : X=20.000 Y=10.000 Z=1.000
+		StaticMeshPath : /Game/LightingSimulator/Meshes/Plane.Plane
+		Name : StagePlane
+		LEOpFile : .leop
+		LETimeline : StagePlane_Logo.letl
+		MaterialPath : /Game/LightingSimulator/Meshes/Materials/LE_ProjectionTex_Mat.LE_ProjectionTex_Mat
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=0.000 Y=0.000 Z=0.000
+		TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+		TransformScale : X=10.000 Y=20.000 Z=1.000
+		StaticMeshPath : /Game/LightingSimulator/Meshes/Cube.Cube
+		Name : Stage
+		LEOpFile : .leop
+		LETimeline : .letl
+		MaterialPath : /Game/LightingSimulator/Meshes/Materials/PureColor_Mat.PureColor_Mat
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-800 Y=1200.000 Z=50.000
+		TransformRotation : P=0 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_01_Blue_01
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRB_01_01
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Blue.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-800.000 Y=1100.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_01_Blue_02
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRB_01_02
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Blue.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-800.000 Y=1000.000 Z=50.000
+		TransformRotation : P=0 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_01_Blue_03
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRB_01_03
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Blue.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-800.000 Y=900.000 Z=50.000
+		TransformRotation : P=0 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_01_Blue_04
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRB_01_04
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Blue.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-800.000 Y=800.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_01_Blue_05
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRB_01_05
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Blue.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-800.000 Y=700.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_01_Blue_06
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRB_01_06
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Blue.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-800.000 Y=600.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_01_Blue_07
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRB_01_07
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Blue.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-800.000 Y=500.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_01_Blue_08
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRB_01_08
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Blue.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-800.000 Y=400.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_01_Blue_09
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRB_01_09
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Blue.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-800.000 Y=300.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_01_Blue_10
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRB_01_10
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Blue.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-800.000 Y=200.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_01_Blue_11
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRB_01_11
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Blue.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-900.000 Y=1200.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_02_Blue_01
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRB_02_01
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Blue.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-900.000 Y=1100.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_02_Blue_02
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRB_02_02
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Blue.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-900.000 Y=1000.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_02_Blue_03
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRB_02_03
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Blue.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-900.000 Y=900.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_02_Blue_04
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRB_02_04
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Blue.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-900.000 Y=800.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_02_Blue_05
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRB_02_05
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Blue.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-900.000 Y=700.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_02_Blue_06
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRB_02_06
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Blue.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-900.000 Y=600.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_02_Blue_07
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRB_02_07
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Blue.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-900.000 Y=500.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_02_Blue_08
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRB_02_08
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Blue.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-900.000 Y=400.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_02_Blue_09
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRB_02_09
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Blue.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-900.000 Y=300.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_02_Blue_10
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRB_02_10
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Blue.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-900.000 Y=200.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_02_Blue_11
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRB_02_11
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Blue.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]	
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-800.000 Y=-1200.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_01_Red_01
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRR_01_01
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Red.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-800.000 Y=-1100.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_01_Red_02
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRR_01_02
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Red.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-800.000 Y=-1000.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_01_Red_03
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRR_01_03
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Red.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-800.000 Y=-900.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_01_Red_04
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRR_01_04
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Red.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-800.000 Y=-800.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_01_Red_05
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRR_01_05
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Red.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-800.000 Y=-700.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_01_Red_06
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRR_01_06
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Red.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-800.000 Y=-600.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_01_Red_07
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRR_01_07
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Red.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-800.000 Y=-500.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_01_Red_08
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRR_01_08
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Red.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-800.000 Y=-400.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_01_Red_09
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRR_01_09
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Red.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-800.000 Y=-300.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_01_Red_10
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRR_01_10
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Red.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-800.000 Y=-200.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_01_Red_11
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRR_01_11
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Red.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-900.000 Y=-1200.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_02_Red_01
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRR_02_01
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Red.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-900.000 Y=-1100.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_02_Red_02
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRR_02_02
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Red.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-900.000 Y=-1000.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_02_Red_03
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRR_02_03
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Red.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-900.000 Y=-900.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_02_Red_04
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRR_02_04
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Red.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-900.000 Y=-800.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_02_Red_05
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRR_02_05
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Red.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-900.000 Y=-700.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_02_Red_06
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRR_02_06
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Red.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-900.000 Y=-600.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_02_Red_07
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRR_02_07
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Red.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-900.000 Y=-500.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_02_Red_08
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRR_02_08
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Red.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-900.000 Y=-400.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_02_Red_09
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRR_02_09
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Red.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-900.000 Y=-300.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_02_Red_10
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRR_02_10
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Red.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-900.000 Y=-200.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_02_Red_11
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRR_02_11
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Red.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1000.000 Y=1200.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_03_Cyan_01
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRC_03_01
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Cyan.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1000.000 Y=1100.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_03_Cyan_02
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRC_03_02
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Cyan.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1000.000 Y=1000.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_03_Cyan_03
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRC_03_03
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Cyan.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1000.000 Y=900.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_03_Cyan_04
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRC_03_04
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Cyan.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1000.000 Y=800.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_03_Cyan_05
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRC_03_05
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Cyan.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1000.000 Y=700.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_03_Cyan_06
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRC_03_06
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Cyan.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1000.000 Y=600.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_03_Cyan_07
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRC_03_07
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Cyan.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1000.000 Y=500.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_03_Cyan_08
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRC_03_08
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Cyan.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1000.000 Y=400.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_03_Cyan_09
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRC_03_09
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Cyan.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1000.000 Y=300.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_03_Cyan_10
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRC_03_10
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Cyan.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1000.000 Y=200.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_03_Cyan_11
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRC_03_11
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Cyan.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1100.000 Y=1200.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_04_Cyan_01
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRC_04_01
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Cyan.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1100.000 Y=1100.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_04_Cyan_02
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRC_04_02
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Cyan.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1100.000 Y=1000.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_04_Cyan_03
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRC_04_03
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Cyan.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1100.000 Y=900.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_04_Cyan_04
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRC_04_04
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Cyan.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1100.000 Y=800.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_04_Cyan_05
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRC_04_05
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Cyan.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1100.000 Y=700.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_04_Cyan_06
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRC_04_06
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Cyan.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1100.000 Y=600.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_04_Cyan_07
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRC_04_07
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Cyan.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1100.000 Y=500.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_04_Cyan_08
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRC_04_08
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Cyan.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1100.000 Y=400.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_04_Cyan_09
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRC_04_09
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Cyan.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1100.000 Y=300.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_04_Cyan_10
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRC_04_10
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Cyan.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1100.000 Y=200.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_04_Cyan_11
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRC_04_11
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Cyan.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]	
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1000.000 Y=-1200.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_03_Orange_01
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRO_03_01
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Orange.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1000.000 Y=-1100.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_03_Orange_02
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRO_03_02
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Orange.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1000.000 Y=-1000.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_03_Orange_03
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRO_03_03
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Orange.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1000.000 Y=-900.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_03_Orange_04
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRO_03_04
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Orange.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1000.000 Y=-800.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_03_Orange_05
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRO_03_05
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Orange.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1000.000 Y=-700.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_03_Orange_06
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRO_03_06
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Orange.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1000.000 Y=-600.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_03_Orange_07
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRO_03_07
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Orange.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1000.000 Y=-500.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_03_Orange_08
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRO_03_08
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Orange.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1000.000 Y=-400.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_03_Orange_09
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRO_03_09
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Orange.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1000.000 Y=-300.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_03_Orange_10
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRO_03_10
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Orange.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1000.000 Y=-200.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_03_Orange_11
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRO_03_11
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Orange.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1100.000 Y=-1200.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_04_Orange_01
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRO_04_01
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Orange.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1100.000 Y=-1100.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_04_Orange_02
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRO_04_02
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Orange.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1100.000 Y=-1000.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_04_Orange_03
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRO_04_03
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Orange.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1100.000 Y=-900.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_04_Orange_04
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRO_04_04
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Orange.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1100.000 Y=-800.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_04_Orange_05
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRO_04_05
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Orange.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1100.000 Y=-700.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_04_Orange_06
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRO_04_06
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Orange.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1100.000 Y=-600.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_04_Orange_07
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRO_04_07
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Orange.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1100.000 Y=-500.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_04_Orange_08
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRO_04_08
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Orange.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1100.000 Y=-400.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_04_Orange_09
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRO_04_09
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Orange.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1100.000 Y=-300.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_04_Orange_10
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRO_04_10
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Orange.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1100.000 Y=-200.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_04_Orange_11
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRO_04_11
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Orange.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1200.000 Y=1200.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_05_Green_01
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRG_05_01
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Green.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1200.000 Y=1100.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_05_Green_02
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRG_05_02
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Green.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1200.000 Y=1000.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_05_Green_03
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRG_05_03
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Green.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1200.000 Y=900.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_05_Green_04
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRG_05_04
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Green.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1200.000 Y=800.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_05_Green_05
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRG_05_05
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Green.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1200.000 Y=700.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_05_Green_06
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRG_05_06
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Green.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1200.000 Y=600.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_05_Green_07
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRG_05_07
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Green.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1200.000 Y=500.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_05_Green_08
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRG_05_08
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Green.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1200.000 Y=400.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_05_Green_09
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRG_05_09
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Green.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1200.000 Y=300.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_05_Green_10
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRG_05_10
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Green.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1200.000 Y=200.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_05_Green_11
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRG_05_11
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Green.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1300.000 Y=1200.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_06_Green_01
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRG_06_01
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Green.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1300.000 Y=1100.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_06_Green_02
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRG_06_02
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Green.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1300.000 Y=1000.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_06_Green_03
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRG_06_03
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Green.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1300.000 Y=900.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_06_Green_04
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRG_06_04
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Green.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1300.000 Y=800.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_06_Green_05
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRG_06_05
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Green.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1300.000 Y=700.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_06_Green_06
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRG_06_06
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Green.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1300.000 Y=600.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_06_Green_07
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRG_06_07
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Green.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1300.000 Y=500.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_06_Green_08
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRG_06_08
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Green.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1300.000 Y=400.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_06_Green_09
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRG_06_09
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Green.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1300.000 Y=300.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_06_Green_10
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRG_06_10
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Green.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1300.000 Y=200.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_06_Green_11
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRG_06_11
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Green.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]	
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1200.000 Y=-1200.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_05_Purple_01
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRP_05_01
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Purple.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1200.000 Y=-1100.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_05_Purple_02
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRP_05_02
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Purple.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1200.000 Y=-1000.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_05_Purple_03
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRP_05_03
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Purple.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1200.000 Y=-900.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_05_Purple_04
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRP_05_04
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Purple.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1200.000 Y=-800.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_05_Purple_05
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRP_05_05
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Purple.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1200.000 Y=-700.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_05_Purple_06
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRP_05_06
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Purple.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1200.000 Y=-600.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_05_Purple_07
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRP_05_07
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Purple.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1200.000 Y=-500.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_05_Purple_08
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRP_05_08
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Purple.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1200.000 Y=-400.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_05_Purple_09
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRP_05_09
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Purple.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1200.000 Y=-300.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_05_Purple_10
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRP_05_10
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Purple.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1200.000 Y=-200.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_05_Purple_11
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRP_05_11
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Purple.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+		[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1300.000 Y=-1200.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_06_Purple_01
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRP_06_01
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Purple.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1300.000 Y=-1100.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_06_Purple_02
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRP_06_02
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Purple.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1300.000 Y=-1000.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_06_Purple_03
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRP_06_03
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Purple.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1300.000 Y=-900.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_06_Purple_04
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRP_06_04
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Purple.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1300.000 Y=-800.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_06_Purple_05
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRP_06_05
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Purple.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1300.000 Y=-700.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_06_Purple_06
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRP_06_06
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Purple.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1300.000 Y=-600.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_06_Purple_07
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRP_06_07
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Purple.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1300.000 Y=-500.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_06_Purple_08
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRP_06_08
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Purple.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1300.000 Y=-400.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_06_Purple_09
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRP_06_09
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Purple.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1300.000 Y=-300.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_06_Purple_10
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRP_06_10
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Purple.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+	[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=-1300.000 Y=-200.000 Z=50.000
+		TransformRotation : P=0.000000 Y=89.999992 R=0.000000
+		TransformScale : X=1.000 Y=1.000 Z=1.000
+		StaticMeshPath : None
+		Name : 荧光棒_06_Purple_11
+		LEOpFile : 荧光棒.leop
+		LETimeline : .letl
+		MaterialPath : None
+		[
+			ClassType : LEStaticMeshComponent
+			TransformLocation : X=0.000 Y=0.000 Z=25.000
+			TransformRotation : P=0.000000 Y=0.000000 R=0.000000
+			TransformScale : X=0.100 Y=0.100 Z=1.000
+			StaticMeshPath : /Game/LightingSimulator/Meshes/Cylinder.Cylinder
+			Name : LRP_06_11
+			LEOpFile : .leop
+			LETimeline : 荧光棒_Purple.letl
+			MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		]
+	]
+]

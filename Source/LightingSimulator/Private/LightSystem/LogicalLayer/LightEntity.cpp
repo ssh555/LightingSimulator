@@ -24,7 +24,7 @@ ALightEntity::ALightEntity()
 	////组件绑定，与构造函数中调用的不同
 	//this->AttachToComponent(RootComponent, FAttachmentTransformRules::SnapToTargetNotIncludingScale);
 
- 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = false;
 	this->rootComp = CreateDefaultSubobject<ULEStaticMeshComponent>("RootComp");
 	this->SetRootComponent(rootComp);
@@ -100,9 +100,21 @@ void ALightEntity::DestroyAllChildren()
 
 void ALightEntity::DestroyLEComponent(USceneComponent* Comp)
 {
+	// 不能删除根组件
+	if (Comp == this->rootComp) {
+		return;
+	}
+	TArray<USceneComponent*> children;
+	this->RootComponent->GetChildrenComponents(true, children);
 	FString delName = "______deleta_______";
-	Comp->Rename(*(Comp->GetName() + delName));
-	Comp->DestroyComponent();
+	for (USceneComponent* child : children)
+	{
+		if (child == Comp) {
+			child->Rename(*(child->GetName() + delName));
+			child->DestroyComponent();
+			return;
+		}
+	}
 }
 
 bool ALightEntity::RenameComp(USceneComponent* Comp, FString newName)

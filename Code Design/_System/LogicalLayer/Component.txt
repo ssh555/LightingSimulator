@@ -1,0 +1,10 @@
+// 废弃，所需要使用的 Component 直接继承 对应的 UActorComponent 及其 派生类
+// 基本组件类
+// 继承自 UActorComponent
+// 需求基本已由 UActorComponent 实现
+// 方便后续扩展
+
+Class Component : UActorComponent
+{
+
+}

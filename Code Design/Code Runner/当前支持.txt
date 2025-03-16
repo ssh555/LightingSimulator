@@ -1,0 +1,94 @@
+文件第一行返回值类型和输入参数
+
+局部变量的声明
+INT|FLOAT|STRING VarName [VarName1 VarName2]
+
+局部变量的赋值
+SET $VarName$ 常量值|$VarName$|表达式
+
+变量 or 值的比较
+比较按val1的类型进行同类比较
+val2可以是局部变量 也可以不是
+返回 true or false 字符串
+== => 
+    EQUAL val1 val2
+!= =>
+    NOTEQUAL val1 val2
+> => 
+    GREATER val1 val2
+< => 
+    LESS val1 val2
+>= =>
+    EGREATER val1 val2
+<= =>
+    ELESS val1 val2
+
+
+BOOL的使用:
+    使用$VarName$
+    STRING只有为true时为TRUE
+    INT 非0即为true
+    FLOAT 同 INT
+    不使用局部变量均作为STRING进行处理
+
+
+IF 表达式语句
+
+IFEND
+
+EXE 文件名 对应参数值
+
+RETURN 单个返回值
+
+// | 相当于for循环的;
+FOR 初始化语句 | 条件 | 最后执行
+
+FOREND
+
+BREAK CONTINUE
+
+val1必须是局部变量，计算后的值存储到val1
+STRING类型仅支持ADD
+ADD val1 val2 
+SUB val1 val2
+MUL val1 val2
+DIV val1 val2
+MOD val1 val2 // 仅 INT
+
+=后面均可为变量,但是=两侧不能有空格
+// 在当前位置上增加相对位移
+AddLocalOffset X=0.000 Y=0.000 Z=0.000
+
+// 在当前位置上增加相对旋转
+AddLocalRotation P=0.000 Y=0.000 R=0.000
+
+// 添加相对于父物体的相对位移
+AddRelativeLocation X=0.000 Y=0.000 Z=0.000
+
+// 添加相对于父物体的相对旋转
+AddRelativeRotation P=0.000 Y=0.000 R=0.000
+
+// 添加世界中的绝对位移
+AddWorldOffset X=0.000 Y=0.000 Z=0.000
+
+// 添加世界中的绝对旋转
+AddWorldRotation P=0.000 Y=0.000 R=0.000
+
+// 获取组件的数据，返回STRING
+// 建议搭配 SET &VAR$ GETDATA 使用
+// Key 可以为变量
+GETDATA Key [Key为存储的数据文件内的左侧key值] RETURN Value
+
+// 设置数据
+SETDATA Key Value 类型均为STRING
+
+// 存在则执行，不存在则跳过
+// ParamName ParamValue 均可以是局部变量
+SETMAT_VECTOR ParamName ParamValue
+// SETMAT_VECTOR ParamName (R=255,G=255,B=255,A=255)
+
+SETMAT_SCALAR ParamName FLOAT
+// SETMAT_SCALAR ParamName 0.0f
+
+SETMAT_TEXTURE 要更改的参数名字 文件路径
+// SETMAT_TEXTURE ParamName /Game/LightingSimulator/Meshes/Textures/T_BlackWhiteSlide.T_BlackWhiteSlide

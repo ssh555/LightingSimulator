@@ -1,0 +1,14 @@
+// 所有 LightSystem 内的 Component 都需要实现此接口 ISaveAndLoadJsonData_Interface
+
+// 将 JSONString 存入对应路径
+// FileName => 保存的路径
+virtual bool SaveDataToJsonFile(const FString& JSONString, FString FileName);
+
+// 将 Data 转为 JSONString [return value]
+virtual void SaveDataToJsonString(FString& JSONStringe);
+
+// 从对应文件读取 JSON 数据 存入 JSONString
+virtual bool LoadDataFromJSONFile(FString& JSONString, FString FileName);
+
+// 将 JSONString 转为 Data
+virtual void LoadDataFromJSONString(const FString& JSONString);

@@ -12,7 +12,7 @@ FReply ULEUserWidget::NativeOnMouseButtonDown(const FGeometry& InGeometry, const
 {
 	//UKismetSystemLibrary::PrintString(this, FString("Down: ") + this->GetName());
 
-	UGameplayStatics::SetViewportMouseCaptureMode(this, EMouseCaptureMode::NoCapture);
+		(this, EMouseCaptureMode::NoCapture);
 
 	return Super::NativeOnMouseButtonDown(InGeometry, InMouseEvent);
 }

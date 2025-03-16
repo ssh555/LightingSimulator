@@ -24,13 +24,13 @@ public:
 	ALightEntity();
 
 	/// <summary>
-	/// 将 此类的 Component 数据存入 JSON 文件
+	/// 将 此类的 Component 数据存入文件
 	/// </summary>
 	UFUNCTION(BlueprintCallable, Category = "LightEntity|SaveAndLoad")
 	bool SaveCompDataToFile(FString FileName);
 
 	/// <summary>
-	/// 从 JSON 文件中读取数据并初始化此类
+	/// 从文件中读取数据并初始化此类
 	/// </summary>
 	UFUNCTION(BlueprintCallable, Category = "LightEntity|SaveAndLoad")
 	bool LoadCompDataFromFile(FString FileName);

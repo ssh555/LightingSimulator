@@ -55,6 +55,11 @@ FString LEOpFile::GetLocalValueKey(FString value)
 
 void LEOpFile::Run(float DeltaTime)
 {
+	//FLinearColor value;
+	//ISaveAndLoadData* ISL = Cast<ISaveAndLoadData>(this->OwnComp);
+	//ISL->MatInst->GetVectorParameterValue(FName("Color"), value);
+	//ALightStudioGameMode::PrintString(value.ToString());
+
 	if (this->curRow >= this->StringData.Num())
 	{
 		if (this->bIsAutoReset && this->curRow != 0)
@@ -95,6 +100,8 @@ LEOpFile::LEOPValue LEOpFile::Execute(FString Code)
 	}
 	TArray<FString> _code;
 	Code.ParseIntoArray(_code, *(FString(" ")), true);
+
+
 
 	// 第一行
 	if (this->curRow == 0) {
@@ -142,7 +149,6 @@ LEOpFile::LEOPValue LEOpFile::Execute(FString Code)
 				}
 				break;
 			}
-			// 返回局部变量的值
 			// if
 			else if (_code[i] == "IF") {
 				Code = Code.Right(Code.Len() - 2 - Code.Find("IF")).TrimStartAndEnd();
@@ -188,25 +194,42 @@ LEOpFile::LEOPValue LEOpFile::Execute(FString Code)
 			}
 			// FOR
 			else if (_code[i] == "FOR") {
+				// 循环结束行
+				int endRow = this->curRow;
+				int cnt = 0;
+				while (this->StringData[++endRow] != "FOREND" || cnt != 0)
+				{
+					if (this->StringData[endRow].Contains("FOR") && !this->StringData[endRow].Contains("FOREND")) {
+						++cnt;
+					}
+					else if (this->StringData[endRow].Contains("FOREND")) {
+						--cnt;
+					}
+				}
+
 				FString _initCode, _conditionCode, _loopCode;
+				// 解析_initCode
 				int j;
 				for (j = i + 1; _code[j] != "|"; ++j) {
 					_initCode += _code[j] + " ";
 				}
 				_initCode.TrimStartAndEndInline();
 
+				// 解析_conditionCode
 				for (++j; _code[j] != "|"; ++j) {
 					_conditionCode += _code[j] + " ";
 				}
 				_conditionCode.TrimStartAndEndInline();
 
+				// 解析_loopCode
 				for (++j; j < _code.Num(); ++j) {
 					_loopCode += _code[j] + " ";
 				}
 				_loopCode.TrimStartAndEndInline();
 
 				int forRow = this->curRow;
-				for (Execute(_initCode); LEOPValToBool(Execute(_conditionCode)); Execute(_loopCode), this->curRow = forRow) {
+				for (Execute(_initCode); LEOPValToBool(Execute(_conditionCode)); Execute(_loopCode)) {
+					this->curRow = forRow;
 					LEOPValue res;
 					while (this->StringData[++this->curRow] != "FOREND")
 					{
@@ -221,10 +244,11 @@ LEOpFile::LEOPValue LEOpFile::Execute(FString Code)
 						continue;
 					}
 				}
+				this->curRow = endRow;
 				return ret;
 			}
-			// ADD SUB MUL DIV
-			else if (_code[i] == "ADD" || _code[i] == "SUB" || _code[i] == "MUL" || _code[i] == "DIV") {
+			// ADD SUB MUL DIV MOD
+			else if (_code[i] == "ADD" || _code[i] == "SUB" || _code[i] == "MUL" || _code[i] == "DIV" || _code[i] == "MOD") {
 				LEOPValue val1 = Execute(_code[i + 1]);
 				LEOPValue val2 = Execute(_code[i + 2]);
 				LEOPValOperation(val1, val2, _code[i]);
@@ -283,7 +307,10 @@ LEOpFile::LEOPValue LEOpFile::Execute(FString Code)
 				ISaveAndLoadData* ISL = Cast<ISaveAndLoadData>(this->OwnComp);
 
 				FLinearColor value;
+
 				value.InitFromString(FString(LEOPValReplace(_code[i + 2])));
+				value /= 255;
+
 				ISL->MatInst->SetVectorParameterValue(FName(*_code[i + 1]), value);
 			}
 			else if (_code[i] == "SETMAT_SCALAR") {
@@ -300,10 +327,6 @@ LEOpFile::LEOPValue LEOpFile::Execute(FString Code)
 
 		}
 	}
-	//UMaterialInstanceDynamic* MatInst = UReflectToolFunctionLibrary::GetPropertyValue<UMaterialInstanceDynamic*>(this->OwnComp, FString("MatInst"));
-	//MatInst->SetScalarParameterValue();
-	//MatInst->SetTextureParameterValue();
-	//MatInst->SetVectorParameterValue();
 	ret.value = Code;
 	return ret;
 }

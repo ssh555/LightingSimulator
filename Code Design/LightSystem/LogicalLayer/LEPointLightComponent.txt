@@ -1,0 +1,29 @@
+// 点光源组件 : UPointLightComponent, ISaveAndLoadJsonData_Interface
+// 继承自 UE 的点光源组件
+// 实现载入和保存数据接口
+
+数据存储
+    // ClassType
+    ClassType : ULEPointLightComponent
+    // Params
+    TransformLocation : (x, y, z)
+    TransformRotation : (x, y, z)
+    TransformScale: (x, y, z)
+    Intensity : float
+    LightColor : (R, G, B)
+    AttenuationRadius : float
+    SourceRadius : float
+    SoftSourceRadius : float
+    SourceLength : float
+    Temperature : float
+    UseTemperature : bool
+    AffectsWorld : bool
+    CastShadows : bool
+    IndirectLightingIntensity : float
+    VolumetricScatteringIntensity : float
+    // OwnedComponents->SaveCompDataToJSONFile, 拼接 JSONString
+
+class ULEPointLightComponent : UPointLightComponent, ISaveAndLoadJsonData_Interface
+{
+
+}

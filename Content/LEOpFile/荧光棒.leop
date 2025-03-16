@@ -1,0 +1,21 @@
+VOID
+// 当前帧荧光棒相对旋转度数
+FLOAT rot
+
+// 获取当前旋转pitch值
+FLOAT pitch
+SET $pitch$ GETDATA Rotation_Pitch
+
+// 根据当前旋转值更新rot
+IF EQUAL $rot$ 0
+    SET $rot$ 1
+IFEND
+IF GREATER $pitch$ 60
+    SET $rot$ -1
+IFEND
+IF LESS $pitch$ -60
+    SET $rot$ 1
+IFEND
+
+// 添加相对旋转
+AddLocalRotation P=$rot$ Y=0 R=0

@@ -1,0 +1,12 @@
+// 开始时置为蓝色
+0 : SetColor_Blue
+// 第2秒置为青色
+2 : SetColor_Cyan
+// 第4秒置为绿色
+4 : SetColor_Green
+// 第6秒置为橙色
+6 : SetColor_Orange
+// 第8秒置为紫色
+8 : SetColor_Purple
+// 第10秒及以后置为红色
+10 : SetColor_Red

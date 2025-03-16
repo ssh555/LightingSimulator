@@ -1,0 +1,26 @@
+// 灯光实体类 : AActor
+// 此类只负责在场景中作为一个 GameObject 显示，不具备其他任何作用
+
+// 所有创建的灯光都以此类为载体
+// 初始只有一个 StaticMeshComponent 作为根组件，可以替换，但是只有一个根组件，最上级没有同级的组件
+// 可以添加预设的几种组件 Component []
+// Component 内部自己运作, LightEntity 只负责挂载 Component
+// 在 灯光工作台 编辑完成后 保存数据时 将此 LightEntity 数据保存为 Component 类型，以便可以将新加的灯光类型继续挂载，即递归保存根组件， LightEntity只负责挂载 Component，并提供一些必要的维护方法
+// 在场景运作中，载入保存的灯光数据，即是生成 LightEntity 并 挂载数据对应的 Component
+
+Class LightEntity : AActor
+{
+// 方法
+public:
+    LightEntity();
+
+    LightEntity(FString FileName){
+        LoadCompDataFromJSON(FileName);
+    }
+
+    // 将 此类的 Component 数据存入 JSON 文件
+    bool SaveCompDataToJSONFile(FString FileName);
+
+    // 从 JSON 文件中读取数据并初始化此类
+    bool LoadCompDataFromJSONFile(FString FileName)
+}

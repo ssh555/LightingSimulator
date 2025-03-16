@@ -1,0 +1,32 @@
+// 直线光组件 : UDirectionalLightComponent, ISaveAndLoadJsonData_Interface
+// 继承自 UE 的直线光组件
+// 实现载入和保存数据接口
+
+数据存储
+// ClassType
+[
+    ClassType : ULEDirectionalLightComponent
+    // Params
+    TransformLocation : (x, y, z)
+    TransformRotation : (x, y, z)
+    TransformSacle: (x, y, z)
+    Intensity : float
+    LightColor : (R, G, B)
+    SourceAngle : float
+    SourceSoftAngle : float
+    Temperature : float
+    UseTemperature : bool
+    AffectsWorld : bool
+    CastShadows : bool
+    IndirectLightingIntensity : float
+    VolumetricScatteringIntensity : float
+    // OwnedComponents->SaveCompDataToJSONFile, 拼接 JSONString
+    [
+        // ChildData 递归存储
+    ]
+]
+
+class ULEDirectionalLightComponent : UDirectionalLightComponent, ISaveAndLoadJsonData_Interface
+{
+
+}

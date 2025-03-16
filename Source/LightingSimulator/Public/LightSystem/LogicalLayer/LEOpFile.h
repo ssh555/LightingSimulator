@@ -175,6 +175,11 @@ class LIGHTINGSIMULATOR_API LEOpFile
 				val1.value = FString::FromInt(FCString::Atoi(*val1.value) / FCString::Atoi(*val2.value));
 			}
 		}
+		else if (opType == "MOD") {
+			if (val1.type == LEOPValType::INT) {
+				val1.value = FString::FromInt(FCString::Atoi(*val1.value) % FCString::Atoi(*val2.value));
+			}
+		}
 	}
 
 protected:

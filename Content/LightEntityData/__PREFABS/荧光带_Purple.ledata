@@ -1,0 +1,33 @@
+[
+		ClassType : LEStaticMeshComponent
+		TransformLocation : X=501.000 Y=0.000 Z=0.000
+		TransformRotation : P=-90.000000 Y=0.000000 R=0.000000
+		TransformScale : X=1.000 Y=20.100 Z=1.000
+		StaticMeshPath : /Engine/BasicShapes/Plane.Plane
+		Name : 荧光带_Purple
+        LEOpFile : .leop
+		LETimeline : 荧光带_Purple.letl
+		MaterialPath : /Game/LightingSimulator/Meshes/Materials/LightRod_Mat.LightRod_Mat
+		[
+			ClassType : LERectLightComponent
+			TransformLocation : X=0.000 Y=0.000 Z=0.000
+			TransformRotation : P=90.000000 Y=10.025046 R=10.025040
+			TransformScale : X=1.000 Y=1.000 Z=1.000
+			Intensity : 1000.0
+			LightColor : (R=188,G=0,B=255,A=255)
+			AttenuationRadius : 1000.0
+			SourceWidth : 2000.0
+			SourceHeight : 64.0
+			BarnDoorAngle : 88.0
+			BarnDoorLength : 20.0
+			Temperature : 6500.0
+			UseTemperature : false
+			AffectsWorld : true
+			CastShadows : true
+			IndirectLightingIntensity : 0.0
+			VolumericScatteringIntensity : 1.0
+			Name : FluorescentBand_04
+			LEOpFile : .leop
+			LETimeline : .letl
+		]
+	]

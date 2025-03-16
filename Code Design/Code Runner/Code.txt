@@ -1,0 +1,53 @@
+每行单独作为运行解析执行输入，递归调用执行整个文本文件 [单个文件即等同于一个函数]
+[ Start [文件] => 点击运行后执行 ] 待定 可以使用  TimeLine Time = 0.0 代替
+Update [文件] => 点击运行后每帧执行
+TimeLine [文件] => 点击运行后根据时间节点执行对应行文本文件
+
+!!!!!
+尽量严格根据换行编写，部分不支持单行嵌套调用
+!!!!!
+
+单个文本文件内的局部变量 暂不考虑数组 可声明多个 但不支持声明并赋值
+声明 INT FLOAT STRING VarName
+INT VAR1 VAR2 VAR3
+to-do : [支持三种基本类型的常规运算] 暂时先只考虑赋值
+使用 $VarName$
+声明并赋值需使用
+INT VAR
+SET $VAR$ 1
+赋值
+SET val1 val2 将val2赋值给val1并返回val1 val1必须是局部变量
+// ADD val1 val2 将val2加到val1并返回val1
+
+
+单个文件第一行必须是返回类型[和输入参数]
+VOID|INT|FLOAT|STRING [INT VarName FLOAT VarName]
+RETURN 单个返回值
+
+EXE 文件名 [参数] => 执行对应文件 [类似于函数]
+
+FOR Init Bool Cycle
+// [ BREAK CONTINUE ] 待定
+//
+FOREND
+
+IF Bool
+// 暂不考虑 ELIF ELSE
+ENDIF
+
+// 在当前位置上增加相对位移
+AddLocalOffset X=0.000 Y=0.000 Z=0.000
+// 在当前位置上增加相对旋转
+AddLocalRotation P=0.000000 Y=0.000000 R=0.000000
+// 添加相对于父物体的相对位移
+AddRelativeLocation X=0.000 Y=0.000 Z=0.000
+// 添加相对于父物体的相对旋转
+AddRelativeRotation P=0.000000 Y=0.000000 R=0.000000
+// 添加世界中的绝对位移
+AddWorldOffset X=0.000 Y=0.000 Z=0.000
+// 添加世界中的绝对旋转
+AddWorldRotation P=0.000000 Y=0.000000 R=0.000000
+// 获取数据，返回STRING
+GetData Key [Key为存储的数据文件内的左侧key值] RETURN Value
+// 设置数据
+SetData Key Value 类型均为STRING

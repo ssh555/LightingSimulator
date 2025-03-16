@@ -1,0 +1,18 @@
+// 废弃，所需要使用的 Entity 直接继承 对应的 AActor 及其 派生类
+// 基本实体类
+// 继承自 AActor
+// 需求基本已由 AActor 实现
+// 方便后续扩展
+
+Class Entity : AActor
+{
+// 属性
+private:
+    // override 所挂载的组件
+    // 挂载的组件全部会更改为 Component, 
+    TSet<UActorComponent*> OwnedComponents;
+
+// 方法
+public:
+
+}

@@ -57,6 +57,9 @@ public:
 protected:
 	TMap<FString, ALightEntity*> LightEntityMaps;
 
+	void LoadDataToISL(ISaveAndLoadData* ISLData, TArray<FString>& dataStrList, int& deepth);
+
+	TArray<FString> SaveDataFromISL(ISaveAndLoadData* ISLData, const int deepth);
 
 
 public:
@@ -65,13 +68,11 @@ public:
 	/// </summary>
 	bool LoadDataFromFile(ALightEntity* LEData, FString FileName);
 
-	void LoadDataToISL(ISaveAndLoadData* ISLData, TArray<FString>& dataStrList, int& deepth);
 	
 	/// <summary>
 	/// 只需要传入文件名称，会在方法内部补全路径，即指定路径
 	/// </summary>
 	bool SaveDataToFile(ALightEntity* LEData, FString FileName);
 
-	TArray<FString> SaveDataFromISL(ISaveAndLoadData* ISLData, const int deepth);
 
 };
